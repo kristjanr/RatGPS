@@ -92,7 +92,7 @@ def sliding_window(X, y, seqlen):
     # seqlen - length of sequences we want to get out of this function
 
     Xs = []
-    for i in xrange(seqlen):
+    for i in range(seqlen):
         if seqlen - i - 1 > 0:
             # take slices from 0 to -99, 1 to -98, ...,  98 to -1.
             Xs.append(X[i:-(seqlen - i - 1), np.newaxis, ...])

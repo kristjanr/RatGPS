@@ -9,7 +9,7 @@ def cvfit(model, X, y, args):
     results = []
     fold_counts = []
 
-    for i, (rest_idx, test_idx) in enumerate(KFold(args.cvfolds).split(X.shape[0])):
+    for i, (rest_idx, test_idx) in enumerate(KFold(args.cvfolds).split(X)):
         # in every cross validation fold, test_idx are all in one row (no shuffling)
         min_test_idx = np.min(test_idx)
         max_test_idx = np.max(test_idx)
