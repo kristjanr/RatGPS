@@ -13,7 +13,7 @@ args = parser.parse_args()
 data = np.load(args.grads_path)
 grads = data['grads']
 targets = data['targets']
-print "grads:", grads.shape, "targets:", targets.shape
+print("grads:", grads.shape, "targets:", targets.shape)
 
 X, y = load_data(args.features, args.locations)
 
@@ -176,4 +176,4 @@ plt.plot(y[split:,0], y[split:,1]);
 plt.title("Validation set")
 plt.savefig(args.save_path + "_arena_coverage.png", dpi = args.dpi)
 
-print "Done"
+print("Done")

@@ -92,7 +92,7 @@ class RatLSTM:
         err = mse(pred_y, y)
         dist = mean_distance(pred_y, y)
 
-        return (err, dist)
+        return err, dist
 
     def predict(self, X, load_path):
         self.model.load_weights(load_path)
