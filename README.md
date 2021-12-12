@@ -1,5 +1,7 @@
 # RatGPS for Python3
-This repository contains the data and code to reproduce the results of "Efficient neural decoding of self-location with a deep recurrent network" (see initial draft in https://www.biorxiv.org/content/early/2018/01/05/242867, final draft still under review).
+This repository contains the data and code to reproduce the results of "Efficient neural decoding of self-location with a deep recurrent network" (see it in https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006822).
+
+...AND potentially, the code that reporoduces the results in https://towardsdatascience.com/reading-rats-mind-2e0b705d5e08 
 
 To run the MLE code and "Bayesian with memory" code, see `Bayesian` folder (and read its README).
 
