@@ -18,10 +18,10 @@ def parameters():
     })
 
     w2v_params = {
-        'vector_size': hp.uniformint('vector_size', 150, 500), # maybe fine-tune later
+        'vector_size': hp.uniformint('vector_size', 150, 500),
         'window': hp.uniformint('window', 4, 20),
         'alpha': hp.normal('alpha', 0.025, 0.005),
-        'shrink_windows': hp.choice('shrink_windows', [True, False]), # some experimental stuff
+        'shrink_windows': hp.choice('shrink_windows', [False, True]), # some experimental stuff
         'sg': hp.choice('sg', [0, 1]), # ?
     } # this is still an incomplete list of hyperparameters
 
@@ -43,12 +43,9 @@ def parameters():
 def optimize_param_space():
     params = parameters()
     obj = HyperBoostOptimizer(fn_name='linreg', space=params) # random_forest or linreg as fn_name
-    opt = obj.process(algo=tpe.suggest, max_evals=1000)
+    opt = obj.process(algo=tpe.suggest, max_evals=1000, existing_trials_file='linreg_at_2021-12-31 12:26:37.bin')
     print(opt)
 
 
 if __name__ == "__main__":
     optimize_param_space()
-
-
-# {'features_para': {}, 'loc_para': {'skip': 0, 'window_hop': 18, 'window_len': 66}, 'random_forest_para': {}, 'sents_para': {'max_empty_words': 6, 'skip': 0, 'window_hop': 18, 'window_len': 66, 'word_ordering': 'shuffle'}, 'w2v_para': {'sg': 0, 'shrink_windows': True, 'vector_size': 250, 'window': 19}}
