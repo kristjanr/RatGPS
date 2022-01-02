@@ -33,8 +33,10 @@ class HyperBoostOptimizer(object):
         self.fn = getattr(self, fn_name)
         self.space = space
         self.filename = f'{fn_name}_at_{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}'
-        self.X, self.y = prepare_data()
-        self.baseline_loss = 27.86 # self.find_baseline_loss()  # commented out to save time while debugging
+        self.X, y = prepare_data()
+        print('Building locations...')
+        self.locations = get_locations(y, **space['loc_para'])
+        self.baseline_loss = self.find_baseline_loss()  # commented out to save time while debugging
         self.monitor = Monitor(self.baseline_loss, self.filename)
         np.random.seed(self.RANDOM_STATE)
 
@@ -57,9 +59,8 @@ class HyperBoostOptimizer(object):
         print(para)
         print('Building sentences...')
         sents = build_sentences(self.X, **para['sents_para'])
-        locations = get_locations(self.y, **para['loc_para'])
         trn_x, val_x = split_df(sents, self.TRAIN_RATIO)
-        trn_y, val_y = split_df(locations, self.TRAIN_RATIO)
+        trn_y, val_y = split_df(self.locations, self.TRAIN_RATIO)
         val_pred = self.train_predict(para, trn_x, trn_y, val_x).T
         val_dists = np.sqrt((val_y['x'] - val_pred[0]) ** 2 + (val_y['y'] - val_pred[1]) ** 2)
         loss = np.mean(val_dists)
@@ -67,10 +68,9 @@ class HyperBoostOptimizer(object):
         return {'loss': loss, 'status': STATUS_OK}
 
     def train_predict(self, para, trn_sents, trn_loc, val_sents):
-        w2v_model = Word2Vec(compute_loss=True, seed=self.RANDOM_STATE, workers=6, **para['w2v_para'])
-        w2v_model.build_vocab(trn_sents)
-        w2v_model.build_vocab(val_sents, update=True)
         print('Training Word2Vec...')
+        w2v_model = Word2Vec(min_count=1, compute_loss=True, seed=self.RANDOM_STATE, workers=6, **para['w2v_para'])
+        w2v_model.build_vocab(trn_sents + val_sents)
         w2v_model.train(corpus_iterable=trn_sents, total_examples=len(trn_sents), epochs=20, compute_loss=True)
 
         print('Building features...')
