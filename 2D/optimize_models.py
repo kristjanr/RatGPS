@@ -6,12 +6,12 @@ from optimizer import HyperBoostOptimizer
 
 def parameters():
     loc_para = {
-        'window_len': 140,
+        'window_len': 70,
         'window_hop': 10,
         "skip": 0,
     }
     sents_param = {
-        'window_len': hp.choice('window_len', [140]),
+        'window_len': hp.choice('window_len', [70]),
         'window_hop': hp.choice('window_hop', [10]),
         "skip": hp.choice('skip', [0]),
         'max_empty_words': hp.uniformint('max_empty_words', 0, 10),
