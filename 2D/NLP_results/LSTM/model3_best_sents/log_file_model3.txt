@@ -1,0 +1,2878 @@
+GPUs:  1
+Epochs: 50
+seqlen:50
+dropout:0.5
+======================================================
+
+FOLD =  0 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 535, loss: 31642.0
+Fold 0 (prep data) done in: 2.316 minutes (0.039 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 65s - loss: 2103.7642 - val_loss: 1067.8529
+Epoch 2/50
+107/107 - 63s - loss: 1017.3519 - val_loss: 282.7957
+Epoch 3/50
+107/107 - 61s - loss: 661.5617 - val_loss: 50.7190
+Epoch 4/50
+107/107 - 64s - loss: 446.9837 - val_loss: 183.8151
+Epoch 5/50
+107/107 - 63s - loss: 325.2289 - val_loss: 275.5361
+Epoch 6/50
+107/107 - 63s - loss: 245.2019 - val_loss: 341.3862
+Epoch 7/50
+107/107 - 63s - loss: 192.7457 - val_loss: 283.3602
+Epoch 8/50
+107/107 - 65s - loss: 155.1436 - val_loss: 330.9948
+Epoch 9/50
+107/107 - 61s - loss: 129.6671 - val_loss: 192.8580
+Epoch 10/50
+107/107 - 55s - loss: 131.6903 - val_loss: 137.0009
+Epoch 11/50
+107/107 - 59s - loss: 113.3079 - val_loss: 275.3079
+Epoch 12/50
+107/107 - 64s - loss: 95.4077 - val_loss: 210.4325
+Epoch 13/50
+107/107 - 64s - loss: 88.5222 - val_loss: 216.4127
+Epoch 14/50
+107/107 - 63s - loss: 83.3356 - val_loss: 187.2124
+Epoch 15/50
+107/107 - 63s - loss: 78.7889 - val_loss: 158.0539
+Epoch 16/50
+107/107 - 64s - loss: 75.6778 - val_loss: 190.5243
+Epoch 17/50
+107/107 - 63s - loss: 73.2760 - val_loss: 354.4790
+Epoch 18/50
+107/107 - 63s - loss: 67.9377 - val_loss: 137.3530
+Epoch 19/50
+107/107 - 64s - loss: 68.3967 - val_loss: 227.2591
+Epoch 20/50
+107/107 - 63s - loss: 66.7616 - val_loss: 168.6186
+Epoch 21/50
+107/107 - 64s - loss: 63.9466 - val_loss: 223.3089
+Epoch 22/50
+107/107 - 64s - loss: 60.5146 - val_loss: 183.7197
+Epoch 23/50
+107/107 - 63s - loss: 64.0091 - val_loss: 233.0246
+Epoch 24/50
+107/107 - 59s - loss: 58.9413 - val_loss: 174.0262
+Epoch 25/50
+107/107 - 55s - loss: 59.0208 - val_loss: 240.2886
+Epoch 26/50
+107/107 - 60s - loss: 58.6169 - val_loss: 204.1732
+Epoch 27/50
+107/107 - 64s - loss: 56.2636 - val_loss: 220.5509
+Epoch 28/50
+107/107 - 64s - loss: 54.9679 - val_loss: 137.6807
+Epoch 29/50
+107/107 - 61s - loss: 53.9038 - val_loss: 209.5452
+Epoch 30/50
+107/107 - 63s - loss: 55.1461 - val_loss: 236.6831
+Epoch 31/50
+107/107 - 63s - loss: 54.9671 - val_loss: 122.2353
+Epoch 32/50
+107/107 - 62s - loss: 52.4432 - val_loss: 227.2873
+Epoch 33/50
+107/107 - 63s - loss: 52.3011 - val_loss: 185.2700
+Epoch 34/50
+107/107 - 63s - loss: 51.2476 - val_loss: 245.1878
+Epoch 35/50
+107/107 - 63s - loss: 49.5283 - val_loss: 253.2059
+Epoch 36/50
+107/107 - 63s - loss: 50.2502 - val_loss: 141.7901
+Epoch 37/50
+107/107 - 63s - loss: 48.4975 - val_loss: 213.7108
+Epoch 38/50
+107/107 - 64s - loss: 49.0528 - val_loss: 255.4302
+Epoch 39/50
+107/107 - 58s - loss: 47.8820 - val_loss: 269.9244
+Epoch 40/50
+107/107 - 55s - loss: 48.0846 - val_loss: 183.8005
+Epoch 41/50
+107/107 - 61s - loss: 48.3523 - val_loss: 291.6235
+Epoch 42/50
+107/107 - 65s - loss: 47.4011 - val_loss: 236.0926
+Epoch 43/50
+107/107 - 62s - loss: 46.7247 - val_loss: 209.4574
+Epoch 44/50
+107/107 - 64s - loss: 47.4999 - val_loss: 296.2804
+Epoch 45/50
+107/107 - 63s - loss: 46.5233 - val_loss: 215.5979
+Epoch 46/50
+107/107 - 63s - loss: 46.1228 - val_loss: 299.2869
+Epoch 47/50
+107/107 - 62s - loss: 45.6930 - val_loss: 165.9496
+Epoch 48/50
+107/107 - 64s - loss: 45.0754 - val_loss: 208.5271
+Epoch 49/50
+107/107 - 63s - loss: 44.6009 - val_loss: 209.5441
+Epoch 50/50
+107/107 - 64s - loss: 44.3995 - val_loss: 220.0827
+train mse = 11.8355, validation mse = 220.083
+train mean dist = 4.10666, validation mean dist = 20.9447
+train median dist = 3.64017, validation median dist = 21.1695
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 0 ):
+mean: test:  16.87586240018036 train: 4.253320191981307
+median: test:  12.424869419449598 train: 3.6742091090276006
+Fold 0 (sents) done in: 53.363 minutes (0.889 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 62s - loss: 2134.2100 - val_loss: 1081.5159
+Epoch 2/50
+107/107 - 61s - loss: 1069.0883 - val_loss: 352.9655
+Epoch 3/50
+107/107 - 57s - loss: 851.0944 - val_loss: 165.2015
+Epoch 4/50
+107/107 - 54s - loss: 806.0790 - val_loss: 85.2618
+Epoch 5/50
+107/107 - 59s - loss: 687.0142 - val_loss: 60.1949
+Epoch 6/50
+107/107 - 62s - loss: 588.6868 - val_loss: 77.2871
+Epoch 7/50
+107/107 - 63s - loss: 460.9745 - val_loss: 102.4253
+Epoch 8/50
+107/107 - 63s - loss: 353.9956 - val_loss: 205.2087
+Epoch 9/50
+107/107 - 62s - loss: 269.8234 - val_loss: 295.1171
+Epoch 10/50
+107/107 - 61s - loss: 217.6327 - val_loss: 257.6094
+Epoch 11/50
+107/107 - 61s - loss: 171.4871 - val_loss: 121.1380
+Epoch 12/50
+107/107 - 61s - loss: 135.4659 - val_loss: 214.0564
+Epoch 13/50
+107/107 - 61s - loss: 108.9365 - val_loss: 35.9129
+Epoch 14/50
+107/107 - 61s - loss: 94.2140 - val_loss: 87.0563
+Epoch 15/50
+107/107 - 62s - loss: 87.4806 - val_loss: 85.4564
+Epoch 16/50
+107/107 - 62s - loss: 75.5513 - val_loss: 94.0336
+Epoch 17/50
+107/107 - 61s - loss: 73.4582 - val_loss: 120.6170
+Epoch 18/50
+107/107 - 58s - loss: 68.6611 - val_loss: 27.9506
+Epoch 19/50
+107/107 - 54s - loss: 69.5151 - val_loss: 35.2224
+Epoch 20/50
+107/107 - 58s - loss: 64.4649 - val_loss: 119.6650
+Epoch 21/50
+107/107 - 62s - loss: 64.5031 - val_loss: 41.9332
+Epoch 22/50
+107/107 - 62s - loss: 58.2196 - val_loss: 151.1807
+Epoch 23/50
+107/107 - 62s - loss: 54.9645 - val_loss: 21.4365
+Epoch 24/50
+107/107 - 63s - loss: 57.7392 - val_loss: 46.6871
+Epoch 25/50
+107/107 - 62s - loss: 53.4875 - val_loss: 77.1368
+Epoch 26/50
+107/107 - 62s - loss: 52.6199 - val_loss: 101.4391
+Epoch 27/50
+107/107 - 60s - loss: 49.9588 - val_loss: 27.7404
+Epoch 28/50
+107/107 - 61s - loss: 48.8218 - val_loss: 45.3607
+Epoch 29/50
+107/107 - 61s - loss: 49.6979 - val_loss: 119.4010
+Epoch 30/50
+107/107 - 62s - loss: 50.0272 - val_loss: 57.3052
+Epoch 31/50
+107/107 - 62s - loss: 47.0614 - val_loss: 101.0088
+Epoch 32/50
+107/107 - 61s - loss: 48.0284 - val_loss: 46.8841
+Epoch 33/50
+107/107 - 61s - loss: 47.7901 - val_loss: 59.8778
+Epoch 34/50
+107/107 - 54s - loss: 47.4521 - val_loss: 76.6806
+Epoch 35/50
+107/107 - 56s - loss: 47.0500 - val_loss: 94.3623
+Epoch 36/50
+107/107 - 62s - loss: 45.6150 - val_loss: 59.0610
+Epoch 37/50
+107/107 - 62s - loss: 45.1874 - val_loss: 103.7715
+Epoch 38/50
+107/107 - 64s - loss: 45.4798 - val_loss: 85.0755
+Epoch 39/50
+107/107 - 63s - loss: 43.5811 - val_loss: 41.9865
+Epoch 40/50
+107/107 - 62s - loss: 45.7956 - val_loss: 63.7779
+Epoch 41/50
+107/107 - 61s - loss: 43.8860 - val_loss: 84.0151
+Epoch 42/50
+107/107 - 60s - loss: 44.4109 - val_loss: 71.3949
+Epoch 43/50
+107/107 - 62s - loss: 42.3591 - val_loss: 62.7198
+Epoch 44/50
+107/107 - 62s - loss: 41.7503 - val_loss: 62.9035
+Epoch 45/50
+107/107 - 61s - loss: 43.0898 - val_loss: 72.9535
+Epoch 46/50
+107/107 - 61s - loss: 43.2449 - val_loss: 96.9954
+Epoch 47/50
+107/107 - 62s - loss: 42.5702 - val_loss: 76.1975
+Epoch 48/50
+107/107 - 61s - loss: 45.5969 - val_loss: 123.1921
+Epoch 49/50
+107/107 - 51s - loss: 43.9853 - val_loss: 94.1526
+Epoch 50/50
+107/107 - 51s - loss: 41.7093 - val_loss: 35.8886
+train mse = 10.2409, validation mse = 35.8886
+train mean dist = 3.85799, validation mean dist = 7.59228
+train median dist = 3.5091, validation median dist = 6.48504
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 0 ):
+mean: test:  15.802144840439453 train: 3.9461708975974523
+median: test:  11.95658237308085 train: 3.536339160369753
+Fold 0 (spikes) done in: 51.527 minutes (0.859 hours)
+======================================================
+
+FOLD =  1 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 381, loss: 32528.0
+Fold 1 (prep data) done in: 2.094 minutes (0.035 hours)
+After sliding window: ((6829, 50, 125), (6829, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6829, 50, 125)
+(6829, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 54s - loss: 1990.9911 - val_loss: 1130.1506
+Epoch 2/50
+107/107 - 53s - loss: 982.3967 - val_loss: 364.5797
+Epoch 3/50
+107/107 - 52s - loss: 677.5906 - val_loss: 128.4228
+Epoch 4/50
+107/107 - 52s - loss: 486.6606 - val_loss: 105.7744
+Epoch 5/50
+107/107 - 52s - loss: 359.6844 - val_loss: 75.4054
+Epoch 6/50
+107/107 - 53s - loss: 308.7195 - val_loss: 110.0339
+Epoch 7/50
+107/107 - 53s - loss: 230.5826 - val_loss: 68.4919
+Epoch 8/50
+107/107 - 52s - loss: 180.3330 - val_loss: 156.5089
+Epoch 9/50
+107/107 - 52s - loss: 157.6482 - val_loss: 110.0785
+Epoch 10/50
+107/107 - 53s - loss: 129.7713 - val_loss: 67.8487
+Epoch 11/50
+107/107 - 52s - loss: 110.1810 - val_loss: 140.0553
+Epoch 12/50
+107/107 - 52s - loss: 99.0377 - val_loss: 141.9400
+Epoch 13/50
+107/107 - 54s - loss: 91.2824 - val_loss: 132.7814
+Epoch 14/50
+107/107 - 52s - loss: 82.6396 - val_loss: 111.8810
+Epoch 15/50
+107/107 - 52s - loss: 80.1797 - val_loss: 166.1557
+Epoch 16/50
+107/107 - 52s - loss: 94.9450 - val_loss: 63.6325
+Epoch 17/50
+107/107 - 52s - loss: 84.6482 - val_loss: 168.4865
+Epoch 18/50
+107/107 - 53s - loss: 69.7135 - val_loss: 111.1434
+Epoch 19/50
+107/107 - 53s - loss: 70.3180 - val_loss: 178.7957
+Epoch 20/50
+107/107 - 52s - loss: 68.8843 - val_loss: 135.9800
+Epoch 21/50
+107/107 - 52s - loss: 65.8263 - val_loss: 178.7814
+Epoch 22/50
+107/107 - 52s - loss: 63.8152 - val_loss: 93.7538
+Epoch 23/50
+107/107 - 53s - loss: 60.2920 - val_loss: 162.1143
+Epoch 24/50
+107/107 - 55s - loss: 64.3195 - val_loss: 207.1309
+Epoch 25/50
+107/107 - 55s - loss: 59.8587 - val_loss: 116.4237
+Epoch 26/50
+107/107 - 55s - loss: 59.6116 - val_loss: 171.6855
+Epoch 27/50
+107/107 - 55s - loss: 55.5204 - val_loss: 193.4315
+Epoch 28/50
+107/107 - 55s - loss: 56.9099 - val_loss: 219.0582
+Epoch 29/50
+107/107 - 55s - loss: 55.2325 - val_loss: 186.0098
+Epoch 30/50
+107/107 - 56s - loss: 55.5356 - val_loss: 222.1879
+Epoch 31/50
+107/107 - 55s - loss: 53.5115 - val_loss: 203.1701
+Epoch 32/50
+107/107 - 54s - loss: 51.9130 - val_loss: 188.1822
+Epoch 33/50
+107/107 - 54s - loss: 55.4566 - val_loss: 183.8497
+Epoch 34/50
+107/107 - 55s - loss: 52.1340 - val_loss: 172.0256
+Epoch 35/50
+107/107 - 55s - loss: 53.4655 - val_loss: 205.3429
+Epoch 36/50
+107/107 - 56s - loss: 50.4412 - val_loss: 203.7490
+Epoch 37/50
+107/107 - 54s - loss: 49.3826 - val_loss: 192.7325
+Epoch 38/50
+107/107 - 54s - loss: 49.6063 - val_loss: 162.2030
+Epoch 39/50
+107/107 - 54s - loss: 47.5836 - val_loss: 168.7460
+Epoch 40/50
+107/107 - 54s - loss: 49.0757 - val_loss: 191.1751
+Epoch 41/50
+107/107 - 56s - loss: 48.1224 - val_loss: 121.4862
+Epoch 42/50
+107/107 - 56s - loss: 46.6484 - val_loss: 218.4320
+Epoch 43/50
+107/107 - 55s - loss: 47.4758 - val_loss: 182.4019
+Epoch 44/50
+107/107 - 54s - loss: 48.0842 - val_loss: 153.4386
+Epoch 45/50
+107/107 - 55s - loss: 47.1218 - val_loss: 175.4754
+Epoch 46/50
+107/107 - 55s - loss: 45.2412 - val_loss: 180.7567
+Epoch 47/50
+107/107 - 56s - loss: 45.8819 - val_loss: 236.4642
+Epoch 48/50
+107/107 - 54s - loss: 46.5387 - val_loss: 176.8605
+Epoch 49/50
+107/107 - 53s - loss: 45.0041 - val_loss: 232.9995
+Epoch 50/50
+107/107 - 53s - loss: 46.0944 - val_loss: 146.1442
+train mse = 14.5856, validation mse = 146.144
+train mean dist = 4.57565, validation mean dist = 17.0778
+train median dist = 4.05025, validation median dist = 17.0557
+After sliding window: ((722, 50, 125), (722, 2))
+After sliding window: ((6899, 50, 125), (6899, 2))
+
+Errors of models with sentences (fold= 1 ):
+mean: test:  16.562476463512674 train: 4.680279408156182
+median: test:  11.943308393283294 train: 4.078577387864031
+Fold 1 (sents) done in: 45.964 minutes (0.766 hours)
+-------------------------------------------
+
+After sliding window: ((6829, 50, 63), (6829, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6829, 50, 63)
+(6829, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 55s - loss: 2003.1656 - val_loss: 1034.6058
+Epoch 2/50
+107/107 - 54s - loss: 1001.6754 - val_loss: 335.8076
+Epoch 3/50
+107/107 - 54s - loss: 773.7431 - val_loss: 189.6146
+Epoch 4/50
+107/107 - 54s - loss: 748.3348 - val_loss: 158.2752
+Epoch 5/50
+107/107 - 54s - loss: 761.6540 - val_loss: 113.6883
+Epoch 6/50
+107/107 - 54s - loss: 625.9233 - val_loss: 92.4581
+Epoch 7/50
+107/107 - 55s - loss: 533.7786 - val_loss: 125.0175
+Epoch 8/50
+107/107 - 54s - loss: 441.4883 - val_loss: 167.1653
+Epoch 9/50
+107/107 - 53s - loss: 595.5563 - val_loss: 2296.2598
+Epoch 10/50
+107/107 - 54s - loss: 500.1199 - val_loss: 165.7602
+Epoch 11/50
+107/107 - 54s - loss: 246.0292 - val_loss: 108.5125
+Epoch 12/50
+107/107 - 54s - loss: 195.5570 - val_loss: 150.2545
+Epoch 13/50
+107/107 - 54s - loss: 294.1244 - val_loss: 264.8029
+Epoch 14/50
+107/107 - 53s - loss: 150.6935 - val_loss: 174.6643
+Epoch 15/50
+107/107 - 53s - loss: 109.4290 - val_loss: 177.1234
+Epoch 16/50
+107/107 - 54s - loss: 99.5744 - val_loss: 144.1472
+Epoch 17/50
+107/107 - 54s - loss: 91.4451 - val_loss: 60.2496
+Epoch 18/50
+107/107 - 54s - loss: 82.8418 - val_loss: 54.5872
+Epoch 19/50
+107/107 - 55s - loss: 77.7076 - val_loss: 46.4750
+Epoch 20/50
+107/107 - 54s - loss: 121.9447 - val_loss: 91.9307
+Epoch 21/50
+107/107 - 54s - loss: 70.9978 - val_loss: 92.6594
+Epoch 22/50
+107/107 - 54s - loss: 85.7484 - val_loss: 45.2471
+Epoch 23/50
+107/107 - 54s - loss: 75.6253 - val_loss: 87.6887
+Epoch 24/50
+107/107 - 55s - loss: 65.8552 - val_loss: 148.4676
+Epoch 25/50
+107/107 - 54s - loss: 61.5363 - val_loss: 87.6859
+Epoch 26/50
+107/107 - 54s - loss: 60.3519 - val_loss: 65.7272
+Epoch 27/50
+107/107 - 54s - loss: 57.7554 - val_loss: 78.7405
+Epoch 28/50
+107/107 - 54s - loss: 55.1109 - val_loss: 175.3771
+Epoch 29/50
+107/107 - 54s - loss: 68.1353 - val_loss: 137.7618
+Epoch 30/50
+107/107 - 55s - loss: 60.9648 - val_loss: 64.0014
+Epoch 31/50
+107/107 - 54s - loss: 69.9739 - val_loss: 100.8438
+Epoch 32/50
+107/107 - 54s - loss: 70.4755 - val_loss: 127.3782
+Epoch 33/50
+107/107 - 54s - loss: 50.8908 - val_loss: 58.9484
+Epoch 34/50
+107/107 - 54s - loss: 51.9941 - val_loss: 77.7822
+Epoch 35/50
+107/107 - 55s - loss: 62.8455 - val_loss: 141.2065
+Epoch 36/50
+107/107 - 54s - loss: 50.7884 - val_loss: 72.4713
+Epoch 37/50
+107/107 - 52s - loss: 49.9678 - val_loss: 104.7796
+Epoch 38/50
+107/107 - 52s - loss: 47.5890 - val_loss: 49.9195
+Epoch 39/50
+107/107 - 52s - loss: 47.8515 - val_loss: 163.6519
+Epoch 40/50
+107/107 - 52s - loss: 47.1378 - val_loss: 53.8172
+Epoch 41/50
+107/107 - 53s - loss: 47.5916 - val_loss: 89.7078
+Epoch 42/50
+107/107 - 52s - loss: 48.1383 - val_loss: 146.3746
+Epoch 43/50
+107/107 - 52s - loss: 47.6386 - val_loss: 139.6122
+Epoch 44/50
+107/107 - 52s - loss: 46.0566 - val_loss: 98.6857
+Epoch 45/50
+107/107 - 52s - loss: 45.1743 - val_loss: 130.2121
+Epoch 46/50
+107/107 - 52s - loss: 45.6146 - val_loss: 129.6832
+Epoch 47/50
+107/107 - 53s - loss: 43.9434 - val_loss: 88.8722
+Epoch 48/50
+107/107 - 53s - loss: 44.7042 - val_loss: 66.9399
+Epoch 49/50
+107/107 - 52s - loss: 70.1160 - val_loss: 118.8722
+Epoch 50/50
+107/107 - 52s - loss: 47.4389 - val_loss: 62.8325
+train mse = 9.03832, validation mse = 62.8325
+train mean dist = 3.66171, validation mean dist = 10.4138
+train median dist = 3.26316, validation median dist = 9.04775
+After sliding window: ((722, 50, 63), (722, 2))
+After sliding window: ((6899, 50, 63), (6899, 2))
+
+Errors of models with spikes (fold= 1 ):
+mean: test:  20.57949711715089 train: 3.769338452681059
+median: test:  14.434701971335716 train: 3.295406241387407
+Fold 1 (spikes) done in: 45.787 minutes (0.763 hours)
+======================================================
+
+FOLD =  2 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 593, loss: 32432.0
+Fold 2 (prep data) done in: 2.145 minutes (0.036 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 54s - loss: 2024.7898 - val_loss: 1084.4174
+Epoch 2/50
+107/107 - 53s - loss: 1007.4682 - val_loss: 326.2253
+Epoch 3/50
+107/107 - 53s - loss: 702.1995 - val_loss: 80.9062
+Epoch 4/50
+107/107 - 53s - loss: 506.2281 - val_loss: 153.7081
+Epoch 5/50
+107/107 - 53s - loss: 389.1313 - val_loss: 235.9488
+Epoch 6/50
+107/107 - 53s - loss: 307.9305 - val_loss: 91.7895
+Epoch 7/50
+107/107 - 53s - loss: 236.4782 - val_loss: 194.7421
+Epoch 8/50
+107/107 - 53s - loss: 184.7273 - val_loss: 298.2846
+Epoch 9/50
+107/107 - 53s - loss: 147.3364 - val_loss: 64.5897
+Epoch 10/50
+107/107 - 53s - loss: 122.6459 - val_loss: 225.1380
+Epoch 11/50
+107/107 - 53s - loss: 108.8608 - val_loss: 131.1804
+Epoch 12/50
+107/107 - 54s - loss: 96.6854 - val_loss: 83.8095
+Epoch 13/50
+107/107 - 53s - loss: 88.4259 - val_loss: 179.1915
+Epoch 14/50
+107/107 - 53s - loss: 83.6283 - val_loss: 152.1437
+Epoch 15/50
+107/107 - 53s - loss: 79.7832 - val_loss: 177.6000
+Epoch 16/50
+107/107 - 53s - loss: 73.3759 - val_loss: 158.4194
+Epoch 17/50
+107/107 - 53s - loss: 72.5326 - val_loss: 211.2851
+Epoch 18/50
+107/107 - 53s - loss: 69.4625 - val_loss: 237.1284
+Epoch 19/50
+107/107 - 53s - loss: 64.7059 - val_loss: 165.2833
+Epoch 20/50
+107/107 - 54s - loss: 61.3656 - val_loss: 146.4783
+Epoch 21/50
+107/107 - 53s - loss: 64.2724 - val_loss: 206.7881
+Epoch 22/50
+107/107 - 53s - loss: 61.1715 - val_loss: 253.2159
+Epoch 23/50
+107/107 - 54s - loss: 59.1000 - val_loss: 75.7078
+Epoch 24/50
+107/107 - 58s - loss: 58.9923 - val_loss: 165.1301
+Epoch 25/50
+107/107 - 57s - loss: 56.6816 - val_loss: 245.3705
+Epoch 26/50
+107/107 - 57s - loss: 55.0313 - val_loss: 128.0740
+Epoch 27/50
+107/107 - 57s - loss: 55.8032 - val_loss: 155.5779
+Epoch 28/50
+107/107 - 57s - loss: 54.2587 - val_loss: 226.7160
+Epoch 29/50
+107/107 - 58s - loss: 52.6057 - val_loss: 198.4686
+Epoch 30/50
+107/107 - 57s - loss: 53.5504 - val_loss: 68.9457
+Epoch 31/50
+107/107 - 57s - loss: 53.1534 - val_loss: 230.5629
+Epoch 32/50
+107/107 - 57s - loss: 49.7617 - val_loss: 213.3905
+Epoch 33/50
+107/107 - 57s - loss: 50.9251 - val_loss: 206.3357
+Epoch 34/50
+107/107 - 57s - loss: 49.5729 - val_loss: 266.7827
+Epoch 35/50
+107/107 - 59s - loss: 50.9473 - val_loss: 221.9203
+Epoch 36/50
+107/107 - 57s - loss: 48.8742 - val_loss: 279.4994
+Epoch 37/50
+107/107 - 57s - loss: 48.7171 - val_loss: 177.4728
+Epoch 38/50
+107/107 - 57s - loss: 48.6717 - val_loss: 116.5120
+Epoch 39/50
+107/107 - 57s - loss: 46.3512 - val_loss: 97.7981
+Epoch 40/50
+107/107 - 58s - loss: 46.9647 - val_loss: 169.3573
+Epoch 41/50
+107/107 - 58s - loss: 46.6716 - val_loss: 109.5519
+Epoch 42/50
+107/107 - 57s - loss: 48.1282 - val_loss: 109.8605
+Epoch 43/50
+107/107 - 57s - loss: 44.8181 - val_loss: 123.4259
+Epoch 44/50
+107/107 - 57s - loss: 46.5358 - val_loss: 141.1887
+Epoch 45/50
+107/107 - 58s - loss: 46.3368 - val_loss: 148.1425
+Epoch 46/50
+107/107 - 57s - loss: 45.4559 - val_loss: 184.0719
+Epoch 47/50
+107/107 - 57s - loss: 44.9712 - val_loss: 169.8045
+Epoch 48/50
+107/107 - 57s - loss: 45.1710 - val_loss: 242.8022
+Epoch 49/50
+107/107 - 57s - loss: 45.4458 - val_loss: 224.5149
+Epoch 50/50
+107/107 - 57s - loss: 44.6961 - val_loss: 210.2940
+train mse = 13.1304, validation mse = 210.294
+train mean dist = 4.37846, validation mean dist = 20.384
+train median dist = 3.84299, validation median dist = 19.4453
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 2 ):
+mean: test:  12.286129831139059 train: 4.505535376824789
+median: test:  9.9420362551636 train: 3.8693334259102796
+Fold 2 (sents) done in: 47.532 minutes (0.792 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 56s - loss: 2133.6094 - val_loss: 1163.4270
+Epoch 2/50
+107/107 - 56s - loss: 1042.9867 - val_loss: 380.7326
+Epoch 3/50
+107/107 - 55s - loss: 808.5125 - val_loss: 208.1348
+Epoch 4/50
+107/107 - 54s - loss: 754.2020 - val_loss: 157.4357
+Epoch 5/50
+107/107 - 56s - loss: 631.7753 - val_loss: 93.1644
+Epoch 6/50
+107/107 - 56s - loss: 506.0385 - val_loss: 91.8201
+Epoch 7/50
+107/107 - 56s - loss: 393.0138 - val_loss: 129.1432
+Epoch 8/50
+107/107 - 56s - loss: 300.0797 - val_loss: 247.5040
+Epoch 9/50
+107/107 - 56s - loss: 243.6001 - val_loss: 201.8956
+Epoch 10/50
+107/107 - 56s - loss: 192.9335 - val_loss: 120.7561
+Epoch 11/50
+107/107 - 57s - loss: 144.9704 - val_loss: 102.9960
+Epoch 12/50
+107/107 - 56s - loss: 117.9990 - val_loss: 77.8362
+Epoch 13/50
+107/107 - 56s - loss: 104.8938 - val_loss: 28.6414
+Epoch 14/50
+107/107 - 56s - loss: 89.3506 - val_loss: 59.7534
+Epoch 15/50
+107/107 - 56s - loss: 86.3533 - val_loss: 55.5457
+Epoch 16/50
+107/107 - 56s - loss: 76.0492 - val_loss: 28.5074
+Epoch 17/50
+107/107 - 57s - loss: 71.4468 - val_loss: 107.8206
+Epoch 18/50
+107/107 - 57s - loss: 71.2856 - val_loss: 31.3733
+Epoch 19/50
+107/107 - 56s - loss: 66.1669 - val_loss: 92.9322
+Epoch 20/50
+107/107 - 56s - loss: 62.9316 - val_loss: 98.2663
+Epoch 21/50
+107/107 - 56s - loss: 61.4132 - val_loss: 48.3111
+Epoch 22/50
+107/107 - 57s - loss: 56.6868 - val_loss: 76.3189
+Epoch 23/50
+107/107 - 56s - loss: 57.8376 - val_loss: 78.4547
+Epoch 24/50
+107/107 - 56s - loss: 54.1433 - val_loss: 112.0416
+Epoch 25/50
+107/107 - 56s - loss: 53.9692 - val_loss: 83.5377
+Epoch 26/50
+107/107 - 57s - loss: 53.0221 - val_loss: 88.1110
+Epoch 27/50
+107/107 - 58s - loss: 52.9473 - val_loss: 61.9290
+Epoch 28/50
+107/107 - 56s - loss: 50.8911 - val_loss: 87.5283
+Epoch 29/50
+107/107 - 56s - loss: 49.3477 - val_loss: 44.1406
+Epoch 30/50
+107/107 - 56s - loss: 48.0838 - val_loss: 86.0710
+Epoch 31/50
+107/107 - 55s - loss: 48.1796 - val_loss: 42.2127
+Epoch 32/50
+107/107 - 56s - loss: 47.8976 - val_loss: 92.5779
+Epoch 33/50
+107/107 - 57s - loss: 46.7284 - val_loss: 54.5836
+Epoch 34/50
+107/107 - 57s - loss: 46.8563 - val_loss: 84.6471
+Epoch 35/50
+107/107 - 56s - loss: 44.7336 - val_loss: 94.8950
+Epoch 36/50
+107/107 - 56s - loss: 44.3071 - val_loss: 48.4312
+Epoch 37/50
+107/107 - 56s - loss: 43.5514 - val_loss: 86.8033
+Epoch 38/50
+107/107 - 56s - loss: 44.5590 - val_loss: 61.1042
+Epoch 39/50
+107/107 - 56s - loss: 43.8921 - val_loss: 48.4877
+Epoch 40/50
+107/107 - 57s - loss: 43.7871 - val_loss: 77.9667
+Epoch 41/50
+107/107 - 58s - loss: 42.7004 - val_loss: 58.3648
+Epoch 42/50
+107/107 - 58s - loss: 42.8472 - val_loss: 100.1300
+Epoch 43/50
+107/107 - 57s - loss: 43.7492 - val_loss: 78.7987
+Epoch 44/50
+107/107 - 56s - loss: 43.0389 - val_loss: 67.2228
+Epoch 45/50
+107/107 - 56s - loss: 41.9127 - val_loss: 98.9051
+Epoch 46/50
+107/107 - 56s - loss: 42.4936 - val_loss: 43.0222
+Epoch 47/50
+107/107 - 57s - loss: 42.1297 - val_loss: 78.0290
+Epoch 48/50
+107/107 - 59s - loss: 41.0075 - val_loss: 115.3490
+Epoch 49/50
+107/107 - 56s - loss: 41.4348 - val_loss: 75.5880
+Epoch 50/50
+107/107 - 56s - loss: 41.5013 - val_loss: 106.0247
+train mse = 10.1918, validation mse = 106.025
+train mean dist = 3.86261, validation mean dist = 14.2341
+train median dist = 3.4186, validation median dist = 14.2224
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 2 ):
+mean: test:  15.1065506405143 train: 3.966158093425577
+median: test:  10.769552816240301 train: 3.451532621216413
+Fold 2 (spikes) done in: 48.104 minutes (0.802 hours)
+======================================================
+
+FOLD =  3 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 544, loss: 31890.0
+Fold 3 (prep data) done in: 2.279 minutes (0.038 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 59s - loss: 2014.2494 - val_loss: 3391.1838
+Epoch 2/50
+107/107 - 58s - loss: 1034.0419 - val_loss: 349.0393
+Epoch 3/50
+107/107 - 57s - loss: 803.1066 - val_loss: 170.1450
+Epoch 4/50
+107/107 - 57s - loss: 640.8600 - val_loss: 73.7068
+Epoch 5/50
+107/107 - 58s - loss: 477.7872 - val_loss: 147.9662
+Epoch 6/50
+107/107 - 56s - loss: 366.9090 - val_loss: 229.5396
+Epoch 7/50
+107/107 - 58s - loss: 288.2586 - val_loss: 195.2785
+Epoch 8/50
+107/107 - 58s - loss: 225.1359 - val_loss: 231.1918
+Epoch 9/50
+107/107 - 57s - loss: 174.0308 - val_loss: 219.4089
+Epoch 10/50
+107/107 - 57s - loss: 146.9289 - val_loss: 176.7748
+Epoch 11/50
+107/107 - 56s - loss: 120.7200 - val_loss: 100.6372
+Epoch 12/50
+107/107 - 56s - loss: 104.0799 - val_loss: 79.7595
+Epoch 13/50
+107/107 - 56s - loss: 99.1799 - val_loss: 101.3752
+Epoch 14/50
+107/107 - 58s - loss: 89.4241 - val_loss: 180.3945
+Epoch 15/50
+107/107 - 59s - loss: 82.3242 - val_loss: 97.1611
+Epoch 16/50
+107/107 - 56s - loss: 78.9922 - val_loss: 98.4920
+Epoch 17/50
+107/107 - 56s - loss: 75.0412 - val_loss: 99.1685
+Epoch 18/50
+107/107 - 56s - loss: 72.0840 - val_loss: 119.7756
+Epoch 19/50
+107/107 - 57s - loss: 67.6069 - val_loss: 96.5207
+Epoch 20/50
+107/107 - 57s - loss: 68.9573 - val_loss: 149.0521
+Epoch 21/50
+107/107 - 58s - loss: 85.8822 - val_loss: 94.1244
+Epoch 22/50
+107/107 - 56s - loss: 66.4943 - val_loss: 174.4228
+Epoch 23/50
+107/107 - 54s - loss: 60.6428 - val_loss: 107.7661
+Epoch 24/50
+107/107 - 53s - loss: 60.6305 - val_loss: 123.7894
+Epoch 25/50
+107/107 - 54s - loss: 58.7906 - val_loss: 91.9244
+Epoch 26/50
+107/107 - 53s - loss: 59.2381 - val_loss: 166.8060
+Epoch 27/50
+107/107 - 54s - loss: 56.3114 - val_loss: 131.9291
+Epoch 28/50
+107/107 - 53s - loss: 56.2981 - val_loss: 116.0760
+Epoch 29/50
+107/107 - 54s - loss: 54.8649 - val_loss: 147.9139
+Epoch 30/50
+107/107 - 50s - loss: 55.2002 - val_loss: 159.8131
+Epoch 31/50
+107/107 - 52s - loss: 53.9906 - val_loss: 197.7068
+Epoch 32/50
+107/107 - 53s - loss: 69.3773 - val_loss: 192.5747
+Epoch 33/50
+107/107 - 52s - loss: 54.3417 - val_loss: 192.5995
+Epoch 34/50
+107/107 - 52s - loss: 51.1468 - val_loss: 136.0200
+Epoch 35/50
+107/107 - 52s - loss: 49.3154 - val_loss: 159.2946
+Epoch 36/50
+107/107 - 52s - loss: 53.5827 - val_loss: 130.2178
+Epoch 37/50
+107/107 - 52s - loss: 49.5237 - val_loss: 245.5746
+Epoch 38/50
+107/107 - 52s - loss: 51.0727 - val_loss: 194.7616
+Epoch 39/50
+107/107 - 52s - loss: 49.6797 - val_loss: 238.7798
+Epoch 40/50
+107/107 - 52s - loss: 49.0925 - val_loss: 243.0612
+Epoch 41/50
+107/107 - 52s - loss: 48.0212 - val_loss: 179.3235
+Epoch 42/50
+107/107 - 52s - loss: 48.0780 - val_loss: 191.6365
+Epoch 43/50
+107/107 - 52s - loss: 46.7024 - val_loss: 205.2350
+Epoch 44/50
+107/107 - 52s - loss: 47.2725 - val_loss: 276.1517
+Epoch 45/50
+107/107 - 52s - loss: 48.6163 - val_loss: 258.3582
+Epoch 46/50
+107/107 - 53s - loss: 45.7764 - val_loss: 219.1610
+Epoch 47/50
+107/107 - 52s - loss: 46.1344 - val_loss: 289.9837
+Epoch 48/50
+107/107 - 52s - loss: 46.4228 - val_loss: 258.6913
+Epoch 49/50
+107/107 - 53s - loss: 44.1718 - val_loss: 183.2791
+Epoch 50/50
+107/107 - 54s - loss: 46.1626 - val_loss: 258.9446
+train mse = 13.1491, validation mse = 258.945
+train mean dist = 4.39039, validation mean dist = 22.6732
+train median dist = 3.88453, validation median dist = 21.6167
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 3 ):
+mean: test:  12.792893808656064 train: 4.560255920024119
+median: test:  11.156086765262522 train: 3.917489449867574
+Fold 3 (sents) done in: 46.737 minutes (0.779 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 53s - loss: 2044.3395 - val_loss: 1064.6125
+Epoch 2/50
+107/107 - 54s - loss: 1027.5328 - val_loss: 349.0656
+Epoch 3/50
+107/107 - 54s - loss: 852.7664 - val_loss: 175.7355
+Epoch 4/50
+107/107 - 53s - loss: 730.5781 - val_loss: 102.6552
+Epoch 5/50
+107/107 - 53s - loss: 588.4214 - val_loss: 64.1822
+Epoch 6/50
+107/107 - 53s - loss: 459.9622 - val_loss: 92.7025
+Epoch 7/50
+107/107 - 53s - loss: 353.2216 - val_loss: 113.6884
+Epoch 8/50
+107/107 - 53s - loss: 266.2724 - val_loss: 245.2551
+Epoch 9/50
+107/107 - 53s - loss: 228.5948 - val_loss: 275.1588
+Epoch 10/50
+107/107 - 52s - loss: 211.0056 - val_loss: 59.4730
+Epoch 11/50
+107/107 - 51s - loss: 135.0734 - val_loss: 173.7198
+Epoch 12/50
+107/107 - 51s - loss: 111.8938 - val_loss: 75.1408
+Epoch 13/50
+107/107 - 51s - loss: 98.3248 - val_loss: 39.7838
+Epoch 14/50
+107/107 - 51s - loss: 85.9727 - val_loss: 33.6629
+Epoch 15/50
+107/107 - 51s - loss: 80.8216 - val_loss: 141.9758
+Epoch 16/50
+107/107 - 52s - loss: 78.2638 - val_loss: 46.7438
+Epoch 17/50
+107/107 - 51s - loss: 73.6990 - val_loss: 42.0166
+Epoch 18/50
+107/107 - 51s - loss: 70.5737 - val_loss: 107.7790
+Epoch 19/50
+107/107 - 51s - loss: 64.8200 - val_loss: 61.9399
+Epoch 20/50
+107/107 - 51s - loss: 64.3701 - val_loss: 49.8340
+Epoch 21/50
+107/107 - 51s - loss: 59.7040 - val_loss: 143.7697
+Epoch 22/50
+107/107 - 51s - loss: 57.6840 - val_loss: 84.4870
+Epoch 23/50
+107/107 - 51s - loss: 56.7831 - val_loss: 43.1628
+Epoch 24/50
+107/107 - 51s - loss: 54.3637 - val_loss: 52.2277
+Epoch 25/50
+107/107 - 51s - loss: 52.7296 - val_loss: 118.4487
+Epoch 26/50
+107/107 - 51s - loss: 52.7754 - val_loss: 75.6424
+Epoch 27/50
+107/107 - 51s - loss: 51.1710 - val_loss: 88.9314
+Epoch 28/50
+107/107 - 52s - loss: 49.9930 - val_loss: 27.3280
+Epoch 29/50
+107/107 - 52s - loss: 47.4168 - val_loss: 102.0232
+Epoch 30/50
+107/107 - 51s - loss: 49.0353 - val_loss: 74.0416
+Epoch 31/50
+107/107 - 51s - loss: 47.5753 - val_loss: 126.7769
+Epoch 32/50
+107/107 - 51s - loss: 54.1763 - val_loss: 21.6678
+Epoch 33/50
+107/107 - 51s - loss: 45.4304 - val_loss: 50.8263
+Epoch 34/50
+107/107 - 52s - loss: 45.0491 - val_loss: 71.2540
+Epoch 35/50
+107/107 - 51s - loss: 44.8614 - val_loss: 80.5203
+Epoch 36/50
+107/107 - 51s - loss: 46.3220 - val_loss: 78.0213
+Epoch 37/50
+107/107 - 50s - loss: 44.0445 - val_loss: 67.2141
+Epoch 38/50
+107/107 - 51s - loss: 44.8549 - val_loss: 78.7883
+Epoch 39/50
+107/107 - 51s - loss: 44.6333 - val_loss: 54.9603
+Epoch 40/50
+107/107 - 51s - loss: 42.5087 - val_loss: 96.0455
+Epoch 41/50
+107/107 - 51s - loss: 42.6063 - val_loss: 101.8897
+Epoch 42/50
+107/107 - 51s - loss: 42.5096 - val_loss: 46.2318
+Epoch 43/50
+107/107 - 51s - loss: 41.4908 - val_loss: 44.3556
+Epoch 44/50
+107/107 - 51s - loss: 41.9316 - val_loss: 93.3660
+Epoch 45/50
+107/107 - 51s - loss: 41.8123 - val_loss: 62.5285
+Epoch 46/50
+107/107 - 52s - loss: 41.2534 - val_loss: 96.8219
+Epoch 47/50
+107/107 - 51s - loss: 40.9580 - val_loss: 66.7618
+Epoch 48/50
+107/107 - 51s - loss: 41.0881 - val_loss: 44.1116
+Epoch 49/50
+107/107 - 51s - loss: 41.1043 - val_loss: 125.3850
+Epoch 50/50
+107/107 - 51s - loss: 40.8665 - val_loss: 82.6412
+train mse = 9.86837, validation mse = 82.6412
+train mean dist = 3.87871, validation mean dist = 12.7409
+train median dist = 3.60081, validation median dist = 13.035
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 3 ):
+mean: test:  13.69728524550252 train: 3.974122639082194
+median: test:  12.45379920826883 train: 3.6278733107486025
+Fold 3 (spikes) done in: 44.03 minutes (0.734 hours)
+======================================================
+
+FOLD =  4 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 454, loss: 33232.0
+Fold 4 (prep data) done in: 2.136 minutes (0.036 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 53s - loss: 2009.7699 - val_loss: 1019.5212
+Epoch 2/50
+107/107 - 52s - loss: 960.9874 - val_loss: 308.8153
+Epoch 3/50
+107/107 - 52s - loss: 764.7006 - val_loss: 122.4421
+Epoch 4/50
+107/107 - 52s - loss: 541.0867 - val_loss: 56.3307
+Epoch 5/50
+107/107 - 53s - loss: 422.5981 - val_loss: 119.1297
+Epoch 6/50
+107/107 - 52s - loss: 340.2170 - val_loss: 189.3539
+Epoch 7/50
+107/107 - 52s - loss: 278.3268 - val_loss: 181.4028
+Epoch 8/50
+107/107 - 52s - loss: 222.9555 - val_loss: 222.4731
+Epoch 9/50
+107/107 - 52s - loss: 200.3562 - val_loss: 124.3823
+Epoch 10/50
+107/107 - 51s - loss: 145.1685 - val_loss: 241.0587
+Epoch 11/50
+107/107 - 53s - loss: 125.5264 - val_loss: 138.5715
+Epoch 12/50
+107/107 - 53s - loss: 108.5036 - val_loss: 142.3226
+Epoch 13/50
+107/107 - 53s - loss: 98.5318 - val_loss: 78.8290
+Epoch 14/50
+107/107 - 53s - loss: 90.1018 - val_loss: 170.9087
+Epoch 15/50
+107/107 - 52s - loss: 82.7418 - val_loss: 234.5118
+Epoch 16/50
+107/107 - 52s - loss: 78.9645 - val_loss: 297.2220
+Epoch 17/50
+107/107 - 53s - loss: 73.8893 - val_loss: 253.2244
+Epoch 18/50
+107/107 - 52s - loss: 71.8217 - val_loss: 375.1088
+Epoch 19/50
+107/107 - 52s - loss: 70.3859 - val_loss: 251.9794
+Epoch 20/50
+107/107 - 52s - loss: 64.6861 - val_loss: 248.5265
+Epoch 21/50
+107/107 - 52s - loss: 64.5748 - val_loss: 215.4474
+Epoch 22/50
+107/107 - 53s - loss: 62.1742 - val_loss: 311.1127
+Epoch 23/50
+107/107 - 53s - loss: 60.3638 - val_loss: 221.6755
+Epoch 24/50
+107/107 - 53s - loss: 58.7163 - val_loss: 121.0008
+Epoch 25/50
+107/107 - 53s - loss: 57.0836 - val_loss: 198.1622
+Epoch 26/50
+107/107 - 52s - loss: 58.0047 - val_loss: 128.6351
+Epoch 27/50
+107/107 - 52s - loss: 56.3148 - val_loss: 240.6506
+Epoch 28/50
+107/107 - 53s - loss: 56.1131 - val_loss: 81.8078
+Epoch 29/50
+107/107 - 53s - loss: 52.6142 - val_loss: 200.0050
+Epoch 30/50
+107/107 - 52s - loss: 53.4260 - val_loss: 123.2673
+Epoch 31/50
+107/107 - 52s - loss: 53.8689 - val_loss: 134.1966
+Epoch 32/50
+107/107 - 52s - loss: 51.1764 - val_loss: 168.0726
+Epoch 33/50
+107/107 - 52s - loss: 51.6883 - val_loss: 188.7346
+Epoch 34/50
+107/107 - 53s - loss: 50.0596 - val_loss: 228.2363
+Epoch 35/50
+107/107 - 53s - loss: 50.9712 - val_loss: 261.7695
+Epoch 36/50
+107/107 - 52s - loss: 49.5214 - val_loss: 246.0495
+Epoch 37/50
+107/107 - 52s - loss: 50.3983 - val_loss: 241.8643
+Epoch 38/50
+107/107 - 52s - loss: 48.2186 - val_loss: 224.4250
+Epoch 39/50
+107/107 - 52s - loss: 48.8662 - val_loss: 169.6039
+Epoch 40/50
+107/107 - 53s - loss: 52.3728 - val_loss: 157.9367
+Epoch 41/50
+107/107 - 53s - loss: 47.3993 - val_loss: 234.0345
+Epoch 42/50
+107/107 - 52s - loss: 46.7024 - val_loss: 177.4022
+Epoch 43/50
+107/107 - 52s - loss: 46.6836 - val_loss: 261.1862
+Epoch 44/50
+107/107 - 53s - loss: 45.2337 - val_loss: 211.1143
+Epoch 45/50
+107/107 - 52s - loss: 48.0541 - val_loss: 207.3801
+Epoch 46/50
+107/107 - 53s - loss: 44.9284 - val_loss: 210.8106
+Epoch 47/50
+107/107 - 53s - loss: 45.3775 - val_loss: 191.2802
+Epoch 48/50
+107/107 - 52s - loss: 45.7356 - val_loss: 233.3342
+Epoch 49/50
+107/107 - 52s - loss: 45.4174 - val_loss: 175.4384
+Epoch 50/50
+107/107 - 52s - loss: 49.5076 - val_loss: 160.2114
+train mse = 12.0488, validation mse = 160.211
+train mean dist = 4.06698, validation mean dist = 17.8629
+train median dist = 3.57653, validation median dist = 17.4436
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 4 ):
+mean: test:  13.451346465806527 train: 4.205335059727385
+median: test:  10.46021205849546 train: 3.6125515200692
+Fold 4 (sents) done in: 44.984 minutes (0.75 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 53s - loss: 2008.2583 - val_loss: 1054.3149
+Epoch 2/50
+107/107 - 52s - loss: 989.6348 - val_loss: 332.6533
+Epoch 3/50
+107/107 - 51s - loss: 788.9175 - val_loss: 184.8695
+Epoch 4/50
+107/107 - 51s - loss: 706.1625 - val_loss: 87.7908
+Epoch 5/50
+107/107 - 51s - loss: 565.1921 - val_loss: 63.2939
+Epoch 6/50
+107/107 - 51s - loss: 452.0602 - val_loss: 97.5770
+Epoch 7/50
+107/107 - 53s - loss: 375.3943 - val_loss: 95.9189
+Epoch 8/50
+107/107 - 51s - loss: 267.3591 - val_loss: 202.3387
+Epoch 9/50
+107/107 - 51s - loss: 210.3588 - val_loss: 126.5571
+Epoch 10/50
+107/107 - 51s - loss: 168.8674 - val_loss: 162.1908
+Epoch 11/50
+107/107 - 51s - loss: 134.3480 - val_loss: 97.6581
+Epoch 12/50
+107/107 - 51s - loss: 112.9187 - val_loss: 224.5391
+Epoch 13/50
+107/107 - 52s - loss: 92.7619 - val_loss: 49.6695
+Epoch 14/50
+107/107 - 51s - loss: 91.1125 - val_loss: 59.7361
+Epoch 15/50
+107/107 - 51s - loss: 89.0578 - val_loss: 105.1013
+Epoch 16/50
+107/107 - 51s - loss: 76.4057 - val_loss: 108.4446
+Epoch 17/50
+107/107 - 51s - loss: 70.7873 - val_loss: 41.8526
+Epoch 18/50
+107/107 - 51s - loss: 66.3250 - val_loss: 51.8834
+Epoch 19/50
+107/107 - 52s - loss: 63.5719 - val_loss: 121.8133
+Epoch 20/50
+107/107 - 51s - loss: 62.9102 - val_loss: 38.2044
+Epoch 21/50
+107/107 - 51s - loss: 58.4943 - val_loss: 136.9783
+Epoch 22/50
+107/107 - 51s - loss: 57.7782 - val_loss: 49.0463
+Epoch 23/50
+107/107 - 51s - loss: 55.9658 - val_loss: 82.7181
+Epoch 24/50
+107/107 - 51s - loss: 55.0163 - val_loss: 159.6535
+Epoch 25/50
+107/107 - 52s - loss: 52.3297 - val_loss: 80.7382
+Epoch 26/50
+107/107 - 51s - loss: 50.7200 - val_loss: 109.6638
+Epoch 27/50
+107/107 - 52s - loss: 50.5872 - val_loss: 147.5182
+Epoch 28/50
+107/107 - 51s - loss: 49.9640 - val_loss: 57.5035
+Epoch 29/50
+107/107 - 51s - loss: 50.7264 - val_loss: 63.8245
+Epoch 30/50
+107/107 - 51s - loss: 46.9160 - val_loss: 113.2303
+Epoch 31/50
+107/107 - 52s - loss: 47.8683 - val_loss: 69.5776
+Epoch 32/50
+107/107 - 51s - loss: 47.8704 - val_loss: 97.8839
+Epoch 33/50
+107/107 - 51s - loss: 45.7336 - val_loss: 94.9810
+Epoch 34/50
+107/107 - 51s - loss: 44.3045 - val_loss: 128.7144
+Epoch 35/50
+107/107 - 51s - loss: 44.4904 - val_loss: 41.9115
+Epoch 36/50
+107/107 - 51s - loss: 45.2594 - val_loss: 171.1854
+Epoch 37/50
+107/107 - 52s - loss: 44.6283 - val_loss: 85.8477
+Epoch 38/50
+107/107 - 51s - loss: 43.9646 - val_loss: 132.3623
+Epoch 39/50
+107/107 - 51s - loss: 44.0219 - val_loss: 62.4599
+Epoch 40/50
+107/107 - 51s - loss: 43.0505 - val_loss: 101.3793
+Epoch 41/50
+107/107 - 51s - loss: 43.9372 - val_loss: 67.7096
+Epoch 42/50
+107/107 - 51s - loss: 42.2341 - val_loss: 61.2856
+Epoch 43/50
+107/107 - 51s - loss: 42.5507 - val_loss: 77.6894
+Epoch 44/50
+107/107 - 51s - loss: 42.7260 - val_loss: 79.4090
+Epoch 45/50
+107/107 - 51s - loss: 42.2607 - val_loss: 90.5392
+Epoch 46/50
+107/107 - 51s - loss: 40.2007 - val_loss: 109.5044
+Epoch 47/50
+107/107 - 51s - loss: 42.0537 - val_loss: 105.7458
+Epoch 48/50
+107/107 - 51s - loss: 41.6422 - val_loss: 60.8991
+Epoch 49/50
+107/107 - 52s - loss: 40.5171 - val_loss: 91.8215
+Epoch 50/50
+107/107 - 51s - loss: 40.4952 - val_loss: 73.6333
+train mse = 9.53996, validation mse = 73.6333
+train mean dist = 3.79589, validation mean dist = 11.8224
+train median dist = 3.44185, validation median dist = 11.5179
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 4 ):
+mean: test:  10.83885307215587 train: 3.904800662266597
+median: test:  9.723521973081754 train: 3.466102130003086
+Fold 4 (spikes) done in: 43.833 minutes (0.731 hours)
+======================================================
+
+FOLD =  5 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 496, loss: 33116.0
+Fold 5 (prep data) done in: 2.11 minutes (0.035 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 53s - loss: 1946.3140 - val_loss: 1043.4807
+Epoch 2/50
+107/107 - 52s - loss: 977.1911 - val_loss: 341.7578
+Epoch 3/50
+107/107 - 52s - loss: 758.6938 - val_loss: 148.4328
+Epoch 4/50
+107/107 - 52s - loss: 590.1396 - val_loss: 99.3631
+Epoch 5/50
+107/107 - 52s - loss: 448.6711 - val_loss: 143.6686
+Epoch 6/50
+107/107 - 52s - loss: 352.3161 - val_loss: 215.2069
+Epoch 7/50
+107/107 - 53s - loss: 274.4902 - val_loss: 289.5176
+Epoch 8/50
+107/107 - 53s - loss: 212.7061 - val_loss: 75.6321
+Epoch 9/50
+107/107 - 52s - loss: 166.1486 - val_loss: 135.9505
+Epoch 10/50
+107/107 - 52s - loss: 129.8652 - val_loss: 189.1522
+Epoch 11/50
+107/107 - 52s - loss: 110.2712 - val_loss: 73.6638
+Epoch 12/50
+107/107 - 52s - loss: 102.8646 - val_loss: 39.9750
+Epoch 13/50
+107/107 - 53s - loss: 89.2680 - val_loss: 69.4434
+Epoch 14/50
+107/107 - 53s - loss: 80.9787 - val_loss: 121.9102
+Epoch 15/50
+107/107 - 52s - loss: 77.0374 - val_loss: 75.8890
+Epoch 16/50
+107/107 - 52s - loss: 75.2109 - val_loss: 63.4810
+Epoch 17/50
+107/107 - 52s - loss: 71.9692 - val_loss: 178.2688
+Epoch 18/50
+107/107 - 52s - loss: 68.5244 - val_loss: 216.5962
+Epoch 19/50
+107/107 - 53s - loss: 66.2225 - val_loss: 173.2012
+Epoch 20/50
+107/107 - 52s - loss: 64.7028 - val_loss: 175.4569
+Epoch 21/50
+107/107 - 52s - loss: 64.3167 - val_loss: 186.0002
+Epoch 22/50
+107/107 - 52s - loss: 61.2985 - val_loss: 121.2888
+Epoch 23/50
+107/107 - 52s - loss: 60.4530 - val_loss: 139.9853
+Epoch 24/50
+107/107 - 52s - loss: 57.9528 - val_loss: 152.4689
+Epoch 25/50
+107/107 - 53s - loss: 58.0359 - val_loss: 222.5768
+Epoch 26/50
+107/107 - 52s - loss: 55.3326 - val_loss: 120.9660
+Epoch 27/50
+107/107 - 52s - loss: 54.2104 - val_loss: 96.0954
+Epoch 28/50
+107/107 - 52s - loss: 54.9265 - val_loss: 174.2990
+Epoch 29/50
+107/107 - 52s - loss: 54.2355 - val_loss: 211.0568
+Epoch 30/50
+107/107 - 52s - loss: 54.4771 - val_loss: 157.1018
+Epoch 31/50
+107/107 - 53s - loss: 52.3821 - val_loss: 172.9189
+Epoch 32/50
+107/107 - 52s - loss: 51.1016 - val_loss: 2324.0464
+Epoch 33/50
+107/107 - 52s - loss: 52.1875 - val_loss: 154.3237
+Epoch 34/50
+107/107 - 52s - loss: 50.2364 - val_loss: 131.4807
+Epoch 35/50
+107/107 - 53s - loss: 50.2116 - val_loss: 218.7333
+Epoch 36/50
+107/107 - 53s - loss: 49.5225 - val_loss: 150.6413
+Epoch 37/50
+107/107 - 53s - loss: 48.2191 - val_loss: 207.9352
+Epoch 38/50
+107/107 - 52s - loss: 46.9928 - val_loss: 195.4241
+Epoch 39/50
+107/107 - 52s - loss: 47.9782 - val_loss: 182.9146
+Epoch 40/50
+107/107 - 52s - loss: 47.0576 - val_loss: 130.7168
+Epoch 41/50
+107/107 - 52s - loss: 46.9593 - val_loss: 220.6830
+Epoch 42/50
+107/107 - 53s - loss: 47.2426 - val_loss: 218.7457
+Epoch 43/50
+107/107 - 53s - loss: 45.5312 - val_loss: 169.1309
+Epoch 44/50
+107/107 - 52s - loss: 46.7430 - val_loss: 133.1848
+Epoch 45/50
+107/107 - 52s - loss: 45.5569 - val_loss: 220.6057
+Epoch 46/50
+107/107 - 52s - loss: 46.4355 - val_loss: 253.4076
+Epoch 47/50
+107/107 - 52s - loss: 45.3701 - val_loss: 171.3054
+Epoch 48/50
+107/107 - 53s - loss: 45.4915 - val_loss: 184.0907
+Epoch 49/50
+107/107 - 53s - loss: 48.1809 - val_loss: 122.2730
+Epoch 50/50
+107/107 - 52s - loss: 44.7249 - val_loss: 149.2850
+train mse = 12.6801, validation mse = 149.285
+train mean dist = 4.33824, validation mean dist = 17.1825
+train median dist = 3.90471, validation median dist = 17.162
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 5 ):
+mean: test:  12.137548848264318 train: 4.469023299057238
+median: test:  10.838301664503819 train: 3.9298777955683963
+Fold 5 (sents) done in: 44.924 minutes (0.749 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 52s - loss: 1980.0389 - val_loss: 1280.7428
+Epoch 2/50
+107/107 - 51s - loss: 1005.8428 - val_loss: 350.2242
+Epoch 3/50
+107/107 - 52s - loss: 810.7621 - val_loss: 181.2363
+Epoch 4/50
+107/107 - 52s - loss: 768.2888 - val_loss: 133.3164
+Epoch 5/50
+107/107 - 51s - loss: 675.0565 - val_loss: 83.6995
+Epoch 6/50
+107/107 - 51s - loss: 565.2226 - val_loss: 85.9728
+Epoch 7/50
+107/107 - 51s - loss: 447.5845 - val_loss: 132.3685
+Epoch 8/50
+107/107 - 51s - loss: 359.9394 - val_loss: 195.4601
+Epoch 9/50
+107/107 - 52s - loss: 280.5447 - val_loss: 175.1474
+Epoch 10/50
+107/107 - 51s - loss: 217.2724 - val_loss: 175.3791
+Epoch 11/50
+107/107 - 51s - loss: 195.8808 - val_loss: 131.1691
+Epoch 12/50
+107/107 - 51s - loss: 135.9819 - val_loss: 289.2521
+Epoch 13/50
+107/107 - 51s - loss: 113.2973 - val_loss: 211.8373
+Epoch 14/50
+107/107 - 51s - loss: 96.4952 - val_loss: 51.1534
+Epoch 15/50
+107/107 - 51s - loss: 85.7046 - val_loss: 95.4023
+Epoch 16/50
+107/107 - 51s - loss: 88.0958 - val_loss: 41.4851
+Epoch 17/50
+107/107 - 51s - loss: 71.7912 - val_loss: 40.8849
+Epoch 18/50
+107/107 - 52s - loss: 67.4183 - val_loss: 86.4450
+Epoch 19/50
+107/107 - 51s - loss: 69.2309 - val_loss: 55.4233
+Epoch 20/50
+107/107 - 51s - loss: 61.9801 - val_loss: 55.5313
+Epoch 21/50
+107/107 - 52s - loss: 64.2407 - val_loss: 81.8158
+Epoch 22/50
+107/107 - 51s - loss: 59.4676 - val_loss: 114.5675
+Epoch 23/50
+107/107 - 51s - loss: 57.7280 - val_loss: 44.2162
+Epoch 24/50
+107/107 - 51s - loss: 54.8332 - val_loss: 97.5938
+Epoch 25/50
+107/107 - 51s - loss: 51.6931 - val_loss: 46.8009
+Epoch 26/50
+107/107 - 51s - loss: 70.6370 - val_loss: 115.5458
+Epoch 27/50
+107/107 - 52s - loss: 62.7742 - val_loss: 67.2489
+Epoch 28/50
+107/107 - 50s - loss: 52.9783 - val_loss: 99.9453
+Epoch 29/50
+107/107 - 49s - loss: 49.9324 - val_loss: 48.8031
+Epoch 30/50
+107/107 - 49s - loss: 49.5310 - val_loss: 87.6959
+Epoch 31/50
+107/107 - 49s - loss: 48.4818 - val_loss: 90.7988
+Epoch 32/50
+107/107 - 49s - loss: 48.0725 - val_loss: 117.1219
+Epoch 33/50
+107/107 - 51s - loss: 46.3740 - val_loss: 58.4552
+Epoch 34/50
+107/107 - 51s - loss: 47.7255 - val_loss: 106.1097
+Epoch 35/50
+107/107 - 51s - loss: 46.4261 - val_loss: 69.4128
+Epoch 36/50
+107/107 - 52s - loss: 45.9939 - val_loss: 70.0686
+Epoch 37/50
+107/107 - 51s - loss: 45.5523 - val_loss: 100.6950
+Epoch 38/50
+107/107 - 51s - loss: 53.0824 - val_loss: 62.5713
+Epoch 39/50
+107/107 - 52s - loss: 43.8436 - val_loss: 109.7307
+Epoch 40/50
+107/107 - 51s - loss: 43.3215 - val_loss: 58.1420
+Epoch 41/50
+107/107 - 51s - loss: 103.1335 - val_loss: 86.0658
+Epoch 42/50
+107/107 - 51s - loss: 41.5963 - val_loss: 66.8448
+Epoch 43/50
+107/107 - 51s - loss: 42.0287 - val_loss: 136.3281
+Epoch 44/50
+107/107 - 50s - loss: 47.4456 - val_loss: 76.8880
+Epoch 45/50
+107/107 - 51s - loss: 41.5047 - val_loss: 123.9375
+Epoch 46/50
+107/107 - 51s - loss: 43.3398 - val_loss: 82.8166
+Epoch 47/50
+107/107 - 51s - loss: 41.9588 - val_loss: 74.2148
+Epoch 48/50
+107/107 - 51s - loss: 40.9032 - val_loss: 105.1563
+Epoch 49/50
+107/107 - 51s - loss: 40.7644 - val_loss: 133.0544
+Epoch 50/50
+107/107 - 51s - loss: 41.6341 - val_loss: 115.1299
+train mse = 10.032, validation mse = 115.13
+train mean dist = 3.89923, validation mean dist = 14.7709
+train median dist = 3.58483, validation median dist = 14.2667
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 5 ):
+mean: test:  12.08128525754476 train: 4.013700332336755
+median: test:  9.067910851961951 train: 3.6092837610269113
+Fold 5 (spikes) done in: 43.693 minutes (0.728 hours)
+======================================================
+
+FOLD =  6 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 485, loss: 30828.0
+Fold 6 (prep data) done in: 2.087 minutes (0.035 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 53s - loss: 2083.2979 - val_loss: 1095.0240
+Epoch 2/50
+107/107 - 52s - loss: 978.9300 - val_loss: 331.5526
+Epoch 3/50
+107/107 - 52s - loss: 726.9225 - val_loss: 109.1613
+Epoch 4/50
+107/107 - 54s - loss: 500.0392 - val_loss: 55.1357
+Epoch 5/50
+107/107 - 53s - loss: 378.9197 - val_loss: 132.2161
+Epoch 6/50
+107/107 - 52s - loss: 299.4404 - val_loss: 107.1751
+Epoch 7/50
+107/107 - 52s - loss: 231.0488 - val_loss: 71.0376
+Epoch 8/50
+107/107 - 52s - loss: 189.1798 - val_loss: 81.1554
+Epoch 9/50
+107/107 - 53s - loss: 155.1947 - val_loss: 93.3161
+Epoch 10/50
+107/107 - 53s - loss: 132.2087 - val_loss: 57.8132
+Epoch 11/50
+107/107 - 52s - loss: 113.6540 - val_loss: 125.1981
+Epoch 12/50
+107/107 - 53s - loss: 102.5982 - val_loss: 44.0023
+Epoch 13/50
+107/107 - 52s - loss: 91.8863 - val_loss: 148.2168
+Epoch 14/50
+107/107 - 52s - loss: 85.7079 - val_loss: 76.8402
+Epoch 15/50
+107/107 - 53s - loss: 80.3681 - val_loss: 273.8735
+Epoch 16/50
+107/107 - 53s - loss: 79.8681 - val_loss: 45.8214
+Epoch 17/50
+107/107 - 53s - loss: 80.1415 - val_loss: 92.5899
+Epoch 18/50
+107/107 - 52s - loss: 70.2882 - val_loss: 100.8361
+Epoch 19/50
+107/107 - 53s - loss: 106.5180 - val_loss: 97.1872
+Epoch 20/50
+107/107 - 52s - loss: 75.6893 - val_loss: 84.4784
+Epoch 21/50
+107/107 - 53s - loss: 63.1880 - val_loss: 137.7758
+Epoch 22/50
+107/107 - 54s - loss: 79.0050 - val_loss: 56.8531
+Epoch 23/50
+107/107 - 53s - loss: 61.1485 - val_loss: 87.9190
+Epoch 24/50
+107/107 - 52s - loss: 58.8837 - val_loss: 117.1653
+Epoch 25/50
+107/107 - 52s - loss: 59.6193 - val_loss: 182.4569
+Epoch 26/50
+107/107 - 52s - loss: 56.0245 - val_loss: 97.3057
+Epoch 27/50
+107/107 - 54s - loss: 55.5351 - val_loss: 125.8963
+Epoch 28/50
+107/107 - 58s - loss: 59.8996 - val_loss: 127.1685
+Epoch 29/50
+107/107 - 58s - loss: 54.8442 - val_loss: 120.6323
+Epoch 30/50
+107/107 - 56s - loss: 53.5383 - val_loss: 107.3058
+Epoch 31/50
+107/107 - 56s - loss: 52.4069 - val_loss: 91.9209
+Epoch 32/50
+107/107 - 57s - loss: 51.8374 - val_loss: 94.1576
+Epoch 33/50
+107/107 - 56s - loss: 51.1478 - val_loss: 133.3989
+Epoch 34/50
+107/107 - 56s - loss: 49.7270 - val_loss: 117.8834
+Epoch 35/50
+107/107 - 55s - loss: 50.6445 - val_loss: 92.2341
+Epoch 36/50
+107/107 - 55s - loss: 49.9055 - val_loss: 96.2826
+Epoch 37/50
+107/107 - 55s - loss: 49.3258 - val_loss: 173.4828
+Epoch 38/50
+107/107 - 56s - loss: 47.8004 - val_loss: 99.0005
+Epoch 39/50
+107/107 - 55s - loss: 49.3898 - val_loss: 86.7852
+Epoch 40/50
+107/107 - 55s - loss: 47.9491 - val_loss: 71.8760
+Epoch 41/50
+107/107 - 55s - loss: 47.8946 - val_loss: 70.9102
+Epoch 42/50
+107/107 - 55s - loss: 47.0694 - val_loss: 167.2041
+Epoch 43/50
+107/107 - 55s - loss: 47.1655 - val_loss: 132.5266
+Epoch 44/50
+107/107 - 55s - loss: 45.1487 - val_loss: 85.2464
+Epoch 45/50
+107/107 - 55s - loss: 46.8780 - val_loss: 138.5542
+Epoch 46/50
+107/107 - 55s - loss: 45.1395 - val_loss: 70.2164
+Epoch 47/50
+107/107 - 55s - loss: 44.6313 - val_loss: 184.1392
+Epoch 48/50
+107/107 - 55s - loss: 46.4868 - val_loss: 98.6775
+Epoch 49/50
+107/107 - 55s - loss: 44.8180 - val_loss: 180.8780
+Epoch 50/50
+107/107 - 55s - loss: 45.6736 - val_loss: 188.6820
+train mse = 14.5071, validation mse = 188.682
+train mean dist = 4.71509, validation mean dist = 19.106
+train median dist = 4.35939, validation median dist = 18.0832
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 6 ):
+mean: test:  14.03027297510566 train: 4.87225166470293
+median: test:  11.02315562029513 train: 4.396100383473348
+Fold 6 (sents) done in: 46.286 minutes (0.771 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 54s - loss: 2089.3640 - val_loss: 1105.5422
+Epoch 2/50
+107/107 - 54s - loss: 1007.6042 - val_loss: 352.2816
+Epoch 3/50
+107/107 - 54s - loss: 779.4972 - val_loss: 187.9380
+Epoch 4/50
+107/107 - 54s - loss: 766.5335 - val_loss: 157.3678
+Epoch 5/50
+107/107 - 54s - loss: 669.9427 - val_loss: 96.8945
+Epoch 6/50
+107/107 - 54s - loss: 551.1426 - val_loss: 79.5135
+Epoch 7/50
+107/107 - 54s - loss: 443.5338 - val_loss: 80.2816
+Epoch 8/50
+107/107 - 54s - loss: 347.0605 - val_loss: 98.1077
+Epoch 9/50
+107/107 - 54s - loss: 270.0079 - val_loss: 167.8571
+Epoch 10/50
+107/107 - 54s - loss: 208.2540 - val_loss: 231.6581
+Epoch 11/50
+107/107 - 54s - loss: 159.5374 - val_loss: 78.6481
+Epoch 12/50
+107/107 - 54s - loss: 124.5807 - val_loss: 103.7922
+Epoch 13/50
+107/107 - 54s - loss: 107.1944 - val_loss: 29.1698
+Epoch 14/50
+107/107 - 54s - loss: 97.2779 - val_loss: 105.0716
+Epoch 15/50
+107/107 - 54s - loss: 83.4322 - val_loss: 21.9443
+Epoch 16/50
+107/107 - 54s - loss: 77.7453 - val_loss: 44.4556
+Epoch 17/50
+107/107 - 54s - loss: 75.0488 - val_loss: 24.7055
+Epoch 18/50
+107/107 - 54s - loss: 67.4705 - val_loss: 25.6716
+Epoch 19/50
+107/107 - 54s - loss: 78.9557 - val_loss: 54.2296
+Epoch 20/50
+107/107 - 54s - loss: 65.3989 - val_loss: 49.3596
+Epoch 21/50
+107/107 - 54s - loss: 62.2360 - val_loss: 25.1928
+Epoch 22/50
+107/107 - 54s - loss: 59.6686 - val_loss: 60.2649
+Epoch 23/50
+107/107 - 54s - loss: 61.3272 - val_loss: 40.9249
+Epoch 24/50
+107/107 - 54s - loss: 56.2202 - val_loss: 95.4733
+Epoch 25/50
+107/107 - 54s - loss: 55.2446 - val_loss: 47.9285
+Epoch 26/50
+107/107 - 54s - loss: 55.5958 - val_loss: 77.7825
+Epoch 27/50
+107/107 - 54s - loss: 57.1303 - val_loss: 34.4257
+Epoch 28/50
+107/107 - 54s - loss: 53.9993 - val_loss: 54.0276
+Epoch 29/50
+107/107 - 54s - loss: 49.9764 - val_loss: 36.4448
+Epoch 30/50
+107/107 - 54s - loss: 51.0502 - val_loss: 56.4005
+Epoch 31/50
+107/107 - 54s - loss: 50.4194 - val_loss: 81.9705
+Epoch 32/50
+107/107 - 54s - loss: 49.1843 - val_loss: 36.0741
+Epoch 33/50
+107/107 - 54s - loss: 47.7619 - val_loss: 64.1276
+Epoch 34/50
+107/107 - 54s - loss: 50.7821 - val_loss: 81.3712
+Epoch 35/50
+107/107 - 54s - loss: 46.9893 - val_loss: 63.1660
+Epoch 36/50
+107/107 - 54s - loss: 46.5331 - val_loss: 55.8046
+Epoch 37/50
+107/107 - 54s - loss: 47.0080 - val_loss: 72.6422
+Epoch 38/50
+107/107 - 54s - loss: 46.1565 - val_loss: 52.8272
+Epoch 39/50
+107/107 - 54s - loss: 46.7940 - val_loss: 84.9077
+Epoch 40/50
+107/107 - 54s - loss: 45.2960 - val_loss: 68.2195
+Epoch 41/50
+107/107 - 54s - loss: 44.6612 - val_loss: 41.6401
+Epoch 42/50
+107/107 - 54s - loss: 43.6851 - val_loss: 40.0609
+Epoch 43/50
+107/107 - 54s - loss: 43.8073 - val_loss: 132.9565
+Epoch 44/50
+107/107 - 54s - loss: 43.2208 - val_loss: 42.7090
+Epoch 45/50
+107/107 - 54s - loss: 42.4370 - val_loss: 78.0946
+Epoch 46/50
+107/107 - 54s - loss: 43.7193 - val_loss: 37.9192
+Epoch 47/50
+107/107 - 54s - loss: 42.6906 - val_loss: 37.9812
+Epoch 48/50
+107/107 - 54s - loss: 42.8108 - val_loss: 20.1049
+Epoch 49/50
+107/107 - 54s - loss: 42.7880 - val_loss: 68.6663
+Epoch 50/50
+107/107 - 54s - loss: 42.1818 - val_loss: 43.0907
+train mse = 13.2039, validation mse = 43.0906
+train mean dist = 3.74482, validation mean dist = 8.58213
+train median dist = 3.33564, validation median dist = 8.92731
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 6 ):
+mean: test:  11.497623100013652 train: 3.83146028520429
+median: test:  9.201797674760423 train: 3.3637820682918766
+Fold 6 (spikes) done in: 45.96 minutes (0.766 hours)
+======================================================
+
+FOLD =  7 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 541, loss: 31430.0
+Fold 7 (prep data) done in: 2.212 minutes (0.037 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 56s - loss: 2014.5801 - val_loss: 1064.2166
+Epoch 2/50
+107/107 - 55s - loss: 1020.8784 - val_loss: 354.2512
+Epoch 3/50
+107/107 - 55s - loss: 771.1318 - val_loss: 137.9283
+Epoch 4/50
+107/107 - 55s - loss: 580.1367 - val_loss: 62.0595
+Epoch 5/50
+107/107 - 55s - loss: 436.9948 - val_loss: 89.8516
+Epoch 6/50
+107/107 - 55s - loss: 330.9003 - val_loss: 114.2264
+Epoch 7/50
+107/107 - 55s - loss: 255.5253 - val_loss: 133.6957
+Epoch 8/50
+107/107 - 55s - loss: 200.4674 - val_loss: 148.4753
+Epoch 9/50
+107/107 - 55s - loss: 155.4804 - val_loss: 99.6477
+Epoch 10/50
+107/107 - 55s - loss: 130.4296 - val_loss: 82.5274
+Epoch 11/50
+107/107 - 55s - loss: 117.3231 - val_loss: 37.8768
+Epoch 12/50
+107/107 - 55s - loss: 106.3178 - val_loss: 8.3531
+Epoch 13/50
+107/107 - 55s - loss: 93.4176 - val_loss: 140.6015
+Epoch 14/50
+107/107 - 55s - loss: 87.5489 - val_loss: 79.6973
+Epoch 15/50
+107/107 - 55s - loss: 84.8497 - val_loss: 112.6693
+Epoch 16/50
+107/107 - 55s - loss: 86.9529 - val_loss: 139.8604
+Epoch 17/50
+107/107 - 55s - loss: 77.0005 - val_loss: 137.1376
+Epoch 18/50
+107/107 - 55s - loss: 72.1048 - val_loss: 64.7863
+Epoch 19/50
+107/107 - 55s - loss: 72.0303 - val_loss: 58.7348
+Epoch 20/50
+107/107 - 55s - loss: 70.5512 - val_loss: 138.4794
+Epoch 21/50
+107/107 - 55s - loss: 65.2844 - val_loss: 80.1850
+Epoch 22/50
+107/107 - 55s - loss: 64.8440 - val_loss: 111.7688
+Epoch 23/50
+107/107 - 55s - loss: 62.5115 - val_loss: 97.8931
+Epoch 24/50
+107/107 - 55s - loss: 62.5811 - val_loss: 163.3361
+Epoch 25/50
+107/107 - 55s - loss: 60.6331 - val_loss: 137.8177
+Epoch 26/50
+107/107 - 55s - loss: 58.4895 - val_loss: 161.2399
+Epoch 27/50
+107/107 - 55s - loss: 57.9769 - val_loss: 171.1213
+Epoch 28/50
+107/107 - 55s - loss: 56.3614 - val_loss: 142.8677
+Epoch 29/50
+107/107 - 55s - loss: 55.2651 - val_loss: 165.3965
+Epoch 30/50
+107/107 - 55s - loss: 57.0989 - val_loss: 168.2503
+Epoch 31/50
+107/107 - 55s - loss: 53.5165 - val_loss: 170.3880
+Epoch 32/50
+107/107 - 55s - loss: 51.1856 - val_loss: 148.7626
+Epoch 33/50
+107/107 - 55s - loss: 54.3556 - val_loss: 240.9439
+Epoch 34/50
+107/107 - 55s - loss: 50.8836 - val_loss: 204.7898
+Epoch 35/50
+107/107 - 54s - loss: 50.7138 - val_loss: 171.4270
+Epoch 36/50
+107/107 - 53s - loss: 50.8575 - val_loss: 216.1355
+Epoch 37/50
+107/107 - 53s - loss: 50.7560 - val_loss: 202.9061
+Epoch 38/50
+107/107 - 53s - loss: 49.5883 - val_loss: 185.5598
+Epoch 39/50
+107/107 - 53s - loss: 50.3237 - val_loss: 162.9317
+Epoch 40/50
+107/107 - 53s - loss: 46.3873 - val_loss: 133.5922
+Epoch 41/50
+107/107 - 53s - loss: 48.4319 - val_loss: 166.2157
+Epoch 42/50
+107/107 - 53s - loss: 47.0147 - val_loss: 191.3918
+Epoch 43/50
+107/107 - 53s - loss: 45.9936 - val_loss: 168.8778
+Epoch 44/50
+107/107 - 53s - loss: 46.4726 - val_loss: 164.5117
+Epoch 45/50
+107/107 - 53s - loss: 45.3005 - val_loss: 155.9954
+Epoch 46/50
+107/107 - 53s - loss: 46.3412 - val_loss: 137.8347
+Epoch 47/50
+107/107 - 53s - loss: 46.8384 - val_loss: 216.3303
+Epoch 48/50
+107/107 - 53s - loss: 45.6529 - val_loss: 190.7848
+Epoch 49/50
+107/107 - 53s - loss: 46.3119 - val_loss: 217.7975
+Epoch 50/50
+107/107 - 53s - loss: 45.5906 - val_loss: 227.4050
+train mse = 15.15, validation mse = 227.405
+train mean dist = 4.65603, validation mean dist = 21.3218
+train median dist = 4.05025, validation median dist = 21.3748
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 7 ):
+mean: test:  12.80674463150528 train: 4.799733381111018
+median: test:  10.861286612544447 train: 4.0871977546911555
+Fold 7 (sents) done in: 46.693 minutes (0.778 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 53s - loss: 2071.1384 - val_loss: 1075.2728
+Epoch 2/50
+107/107 - 52s - loss: 1053.1239 - val_loss: 337.6220
+Epoch 3/50
+107/107 - 52s - loss: 834.4140 - val_loss: 165.6813
+Epoch 4/50
+107/107 - 52s - loss: 779.7866 - val_loss: 178.1084
+Epoch 5/50
+107/107 - 52s - loss: 790.5663 - val_loss: 127.2853
+Epoch 6/50
+107/107 - 52s - loss: 669.4622 - val_loss: 69.2018
+Epoch 7/50
+107/107 - 52s - loss: 543.4044 - val_loss: 71.6074
+Epoch 8/50
+107/107 - 52s - loss: 495.9654 - val_loss: 98.8353
+Epoch 9/50
+107/107 - 52s - loss: 409.8112 - val_loss: 108.7389
+Epoch 10/50
+107/107 - 52s - loss: 311.5372 - val_loss: 219.3349
+Epoch 11/50
+107/107 - 52s - loss: 253.8022 - val_loss: 250.6553
+Epoch 12/50
+107/107 - 52s - loss: 305.8074 - val_loss: 258.7840
+Epoch 13/50
+107/107 - 52s - loss: 197.7626 - val_loss: 287.9919
+Epoch 14/50
+107/107 - 52s - loss: 142.6723 - val_loss: 302.8997
+Epoch 15/50
+107/107 - 52s - loss: 116.8590 - val_loss: 129.9798
+Epoch 16/50
+107/107 - 52s - loss: 103.0429 - val_loss: 46.7595
+Epoch 17/50
+107/107 - 52s - loss: 98.3764 - val_loss: 96.4818
+Epoch 18/50
+107/107 - 52s - loss: 86.2547 - val_loss: 257.9432
+Epoch 19/50
+107/107 - 52s - loss: 80.2554 - val_loss: 45.9043
+Epoch 20/50
+107/107 - 52s - loss: 91.8048 - val_loss: 26.4301
+Epoch 21/50
+107/107 - 52s - loss: 67.9970 - val_loss: 102.1703
+Epoch 22/50
+107/107 - 52s - loss: 66.9515 - val_loss: 84.9228
+Epoch 23/50
+107/107 - 52s - loss: 65.4422 - val_loss: 108.9005
+Epoch 24/50
+107/107 - 52s - loss: 61.6085 - val_loss: 56.9541
+Epoch 25/50
+107/107 - 52s - loss: 61.3491 - val_loss: 93.6500
+Epoch 26/50
+107/107 - 52s - loss: 59.3465 - val_loss: 146.3281
+Epoch 27/50
+107/107 - 52s - loss: 57.0810 - val_loss: 59.1351
+Epoch 28/50
+107/107 - 52s - loss: 54.3237 - val_loss: 109.7262
+Epoch 29/50
+107/107 - 52s - loss: 54.0784 - val_loss: 30.6017
+Epoch 30/50
+107/107 - 52s - loss: 54.7378 - val_loss: 164.0448
+Epoch 31/50
+107/107 - 52s - loss: 55.3272 - val_loss: 62.5052
+Epoch 32/50
+107/107 - 52s - loss: 52.4862 - val_loss: 21.6781
+Epoch 33/50
+107/107 - 52s - loss: 52.5567 - val_loss: 122.5177
+Epoch 34/50
+107/107 - 52s - loss: 50.4534 - val_loss: 118.3484
+Epoch 35/50
+107/107 - 52s - loss: 48.8235 - val_loss: 44.4448
+Epoch 36/50
+107/107 - 52s - loss: 49.2034 - val_loss: 156.9187
+Epoch 37/50
+107/107 - 52s - loss: 48.5016 - val_loss: 39.3228
+Epoch 38/50
+107/107 - 52s - loss: 47.0748 - val_loss: 163.0679
+Epoch 39/50
+107/107 - 52s - loss: 47.3049 - val_loss: 61.6458
+Epoch 40/50
+107/107 - 52s - loss: 46.8496 - val_loss: 66.5399
+Epoch 41/50
+107/107 - 52s - loss: 45.9244 - val_loss: 93.6014
+Epoch 42/50
+107/107 - 52s - loss: 45.8910 - val_loss: 50.9456
+Epoch 43/50
+107/107 - 52s - loss: 45.3772 - val_loss: 148.1320
+Epoch 44/50
+107/107 - 52s - loss: 44.3485 - val_loss: 74.1791
+Epoch 45/50
+107/107 - 52s - loss: 43.5022 - val_loss: 71.5032
+Epoch 46/50
+107/107 - 52s - loss: 44.1868 - val_loss: 47.0680
+Epoch 47/50
+107/107 - 52s - loss: 43.9954 - val_loss: 56.8483
+Epoch 48/50
+107/107 - 52s - loss: 42.7813 - val_loss: 37.2717
+Epoch 49/50
+107/107 - 52s - loss: 44.0310 - val_loss: 81.1414
+Epoch 50/50
+107/107 - 52s - loss: 55.5921 - val_loss: 71.7405
+train mse = 10.9611, validation mse = 71.7405
+train mean dist = 3.91697, validation mean dist = 11.6671
+train median dist = 3.3876, validation median dist = 13.0261
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 7 ):
+mean: test:  10.24366665577113 train: 4.009619423178693
+median: test:  9.004788871517059 train: 3.417588981773263
+Fold 7 (spikes) done in: 44.292 minutes (0.738 hours)
+======================================================
+
+FOLD =  8 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 497, loss: 30912.0
+Fold 8 (prep data) done in: 2.193 minutes (0.037 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 54s - loss: 1948.7981 - val_loss: 1092.8958
+Epoch 2/50
+107/107 - 53s - loss: 989.4061 - val_loss: 381.1284
+Epoch 3/50
+107/107 - 53s - loss: 722.5419 - val_loss: 108.6679
+Epoch 4/50
+107/107 - 53s - loss: 519.9502 - val_loss: 66.3948
+Epoch 5/50
+107/107 - 53s - loss: 425.4486 - val_loss: 40.3775
+Epoch 6/50
+107/107 - 53s - loss: 307.2148 - val_loss: 49.1522
+Epoch 7/50
+107/107 - 53s - loss: 246.6612 - val_loss: 99.9013
+Epoch 8/50
+107/107 - 53s - loss: 191.3761 - val_loss: 94.3605
+Epoch 9/50
+107/107 - 53s - loss: 146.4780 - val_loss: 230.8501
+Epoch 10/50
+107/107 - 53s - loss: 121.0915 - val_loss: 186.9356
+Epoch 11/50
+107/107 - 53s - loss: 107.1935 - val_loss: 80.8610
+Epoch 12/50
+107/107 - 53s - loss: 92.7956 - val_loss: 247.8199
+Epoch 13/50
+107/107 - 53s - loss: 87.9384 - val_loss: 117.7182
+Epoch 14/50
+107/107 - 53s - loss: 82.2443 - val_loss: 189.5185
+Epoch 15/50
+107/107 - 53s - loss: 79.5733 - val_loss: 221.6919
+Epoch 16/50
+107/107 - 53s - loss: 71.8159 - val_loss: 106.4296
+Epoch 17/50
+107/107 - 53s - loss: 73.8896 - val_loss: 122.5455
+Epoch 18/50
+107/107 - 53s - loss: 69.8751 - val_loss: 77.6427
+Epoch 19/50
+107/107 - 53s - loss: 65.8205 - val_loss: 204.6963
+Epoch 20/50
+107/107 - 53s - loss: 63.6200 - val_loss: 96.2907
+Epoch 21/50
+107/107 - 53s - loss: 60.7186 - val_loss: 170.2504
+Epoch 22/50
+107/107 - 53s - loss: 61.9934 - val_loss: 177.6605
+Epoch 23/50
+107/107 - 53s - loss: 60.0872 - val_loss: 103.3668
+Epoch 24/50
+107/107 - 53s - loss: 58.5517 - val_loss: 161.9708
+Epoch 25/50
+107/107 - 53s - loss: 57.6840 - val_loss: 115.9801
+Epoch 26/50
+107/107 - 53s - loss: 58.2903 - val_loss: 139.1079
+Epoch 27/50
+107/107 - 53s - loss: 57.0169 - val_loss: 97.2153
+Epoch 28/50
+107/107 - 53s - loss: 54.2154 - val_loss: 177.7386
+Epoch 29/50
+107/107 - 53s - loss: 56.0362 - val_loss: 141.7374
+Epoch 30/50
+107/107 - 53s - loss: 51.2267 - val_loss: 187.9517
+Epoch 31/50
+107/107 - 53s - loss: 51.6270 - val_loss: 124.0673
+Epoch 32/50
+107/107 - 53s - loss: 50.8672 - val_loss: 131.4272
+Epoch 33/50
+107/107 - 53s - loss: 56.8610 - val_loss: 126.6908
+Epoch 34/50
+107/107 - 53s - loss: 50.2855 - val_loss: 154.4350
+Epoch 35/50
+107/107 - 53s - loss: 50.4997 - val_loss: 147.6565
+Epoch 36/50
+107/107 - 53s - loss: 48.5384 - val_loss: 147.8602
+Epoch 37/50
+107/107 - 53s - loss: 48.1734 - val_loss: 188.6491
+Epoch 38/50
+107/107 - 53s - loss: 48.7752 - val_loss: 175.7247
+Epoch 39/50
+107/107 - 53s - loss: 49.2917 - val_loss: 142.2332
+Epoch 40/50
+107/107 - 53s - loss: 47.0035 - val_loss: 150.9333
+Epoch 41/50
+107/107 - 53s - loss: 46.4961 - val_loss: 182.6692
+Epoch 42/50
+107/107 - 53s - loss: 46.1914 - val_loss: 118.9597
+Epoch 43/50
+107/107 - 53s - loss: 46.3021 - val_loss: 124.0513
+Epoch 44/50
+107/107 - 53s - loss: 46.5628 - val_loss: 122.9056
+Epoch 45/50
+107/107 - 53s - loss: 45.0928 - val_loss: 137.3448
+Epoch 46/50
+107/107 - 53s - loss: 45.9199 - val_loss: 104.6785
+Epoch 47/50
+107/107 - 53s - loss: 44.3253 - val_loss: 137.1519
+Epoch 48/50
+107/107 - 53s - loss: 43.7655 - val_loss: 109.6742
+Epoch 49/50
+107/107 - 53s - loss: 43.9547 - val_loss: 140.8629
+Epoch 50/50
+107/107 - 53s - loss: 45.7013 - val_loss: 141.6953
+train mse = 15.3051, validation mse = 141.695
+train mean dist = 4.69332, validation mean dist = 16.7737
+train median dist = 4.15389, validation median dist = 16.534
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 8 ):
+mean: test:  13.65251157482155 train: 4.8071997809408185
+median: test:  11.905503684466046 train: 4.187686981802931
+Fold 8 (sents) done in: 45.336 minutes (0.756 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 52s - loss: 1938.1754 - val_loss: 1082.9532
+Epoch 2/50
+107/107 - 52s - loss: 987.4811 - val_loss: 378.7123
+Epoch 3/50
+107/107 - 52s - loss: 812.9241 - val_loss: 233.4797
+Epoch 4/50
+107/107 - 52s - loss: 777.7383 - val_loss: 137.5667
+Epoch 5/50
+107/107 - 52s - loss: 621.4396 - val_loss: 94.4540
+Epoch 6/50
+107/107 - 52s - loss: 515.0689 - val_loss: 71.7618
+Epoch 7/50
+107/107 - 52s - loss: 387.0757 - val_loss: 84.6110
+Epoch 8/50
+107/107 - 52s - loss: 291.6223 - val_loss: 191.9860
+Epoch 9/50
+107/107 - 52s - loss: 223.5983 - val_loss: 218.3745
+Epoch 10/50
+107/107 - 52s - loss: 165.3925 - val_loss: 162.0961
+Epoch 11/50
+107/107 - 52s - loss: 134.9473 - val_loss: 73.5260
+Epoch 12/50
+107/107 - 52s - loss: 109.5536 - val_loss: 72.0428
+Epoch 13/50
+107/107 - 52s - loss: 94.4034 - val_loss: 76.5388
+Epoch 14/50
+107/107 - 52s - loss: 89.5008 - val_loss: 69.1607
+Epoch 15/50
+107/107 - 52s - loss: 86.4158 - val_loss: 33.2593
+Epoch 16/50
+107/107 - 52s - loss: 74.9109 - val_loss: 53.5363
+Epoch 17/50
+107/107 - 52s - loss: 68.7750 - val_loss: 113.3478
+Epoch 18/50
+107/107 - 52s - loss: 67.0861 - val_loss: 73.2448
+Epoch 19/50
+107/107 - 52s - loss: 66.7890 - val_loss: 91.1313
+Epoch 20/50
+107/107 - 52s - loss: 65.2919 - val_loss: 83.2975
+Epoch 21/50
+107/107 - 52s - loss: 61.8415 - val_loss: 51.2980
+Epoch 22/50
+107/107 - 52s - loss: 64.6118 - val_loss: 106.2495
+Epoch 23/50
+107/107 - 52s - loss: 56.4341 - val_loss: 81.1242
+Epoch 24/50
+107/107 - 52s - loss: 56.1956 - val_loss: 107.8059
+Epoch 25/50
+107/107 - 52s - loss: 53.1296 - val_loss: 62.3867
+Epoch 26/50
+107/107 - 52s - loss: 51.9113 - val_loss: 78.5878
+Epoch 27/50
+107/107 - 52s - loss: 54.8481 - val_loss: 85.8666
+Epoch 28/50
+107/107 - 52s - loss: 49.3174 - val_loss: 46.3440
+Epoch 29/50
+107/107 - 52s - loss: 49.1406 - val_loss: 64.4461
+Epoch 30/50
+107/107 - 52s - loss: 48.5989 - val_loss: 46.3478
+Epoch 31/50
+107/107 - 52s - loss: 48.2572 - val_loss: 121.9332
+Epoch 32/50
+107/107 - 52s - loss: 46.2536 - val_loss: 76.2521
+Epoch 33/50
+107/107 - 52s - loss: 45.9356 - val_loss: 124.3343
+Epoch 34/50
+107/107 - 52s - loss: 47.2349 - val_loss: 66.4604
+Epoch 35/50
+107/107 - 52s - loss: 45.1937 - val_loss: 76.9000
+Epoch 36/50
+107/107 - 52s - loss: 46.2953 - val_loss: 108.9707
+Epoch 37/50
+107/107 - 52s - loss: 43.4002 - val_loss: 69.9855
+Epoch 38/50
+107/107 - 52s - loss: 44.2400 - val_loss: 128.1084
+Epoch 39/50
+107/107 - 52s - loss: 43.7999 - val_loss: 118.7744
+Epoch 40/50
+107/107 - 52s - loss: 43.2046 - val_loss: 152.6773
+Epoch 41/50
+107/107 - 52s - loss: 41.7079 - val_loss: 118.5093
+Epoch 42/50
+107/107 - 52s - loss: 43.1769 - val_loss: 71.1680
+Epoch 43/50
+107/107 - 52s - loss: 42.6059 - val_loss: 104.0353
+Epoch 44/50
+107/107 - 52s - loss: 41.9579 - val_loss: 140.5586
+Epoch 45/50
+107/107 - 52s - loss: 42.9261 - val_loss: 183.7499
+Epoch 46/50
+107/107 - 52s - loss: 41.3638 - val_loss: 106.2750
+Epoch 47/50
+107/107 - 52s - loss: 41.6335 - val_loss: 51.3694
+Epoch 48/50
+107/107 - 52s - loss: 41.1709 - val_loss: 104.7337
+Epoch 49/50
+107/107 - 52s - loss: 40.3558 - val_loss: 98.1409
+Epoch 50/50
+107/107 - 52s - loss: 41.2392 - val_loss: 42.9847
+train mse = 9.37661, validation mse = 42.9847
+train mean dist = 3.74258, validation mean dist = 8.95906
+train median dist = 3.36584, validation median dist = 8.98522
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 8 ):
+mean: test:  15.397878700841352 train: 3.8285523538488406
+median: test:  10.921302516548286 train: 3.387538162530877
+Fold 8 (spikes) done in: 44.294 minutes (0.738 hours)
+======================================================
+
+FOLD =  9 :
+======================================================
+preparing data...
+Training word2vec for 600 epochs...
+word2vec best epoch: 382, loss: 31526.0
+Fold 9 (prep data) done in: 2.205 minutes (0.037 hours)
+After sliding window: ((6828, 50, 125), (6828, 2))
+After sliding window: ((21, 50, 125), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 125)]         0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           391168    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 916,994
+Trainable params: 916,994
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 125)
+(6828, 2)
+(21, 50, 125)
+(21, 2)
+Epoch 1/50
+107/107 - 54s - loss: 1997.0579 - val_loss: 1920.1389
+Epoch 2/50
+107/107 - 53s - loss: 1038.1727 - val_loss: 850.2731
+Epoch 3/50
+107/107 - 53s - loss: 688.0813 - val_loss: 376.6186
+Epoch 4/50
+107/107 - 53s - loss: 515.5326 - val_loss: 150.4011
+Epoch 5/50
+107/107 - 53s - loss: 387.6943 - val_loss: 77.0014
+Epoch 6/50
+107/107 - 53s - loss: 301.0387 - val_loss: 27.1323
+Epoch 7/50
+107/107 - 53s - loss: 230.0184 - val_loss: 17.3118
+Epoch 8/50
+107/107 - 53s - loss: 176.9877 - val_loss: 34.3726
+Epoch 9/50
+107/107 - 53s - loss: 141.1640 - val_loss: 43.1348
+Epoch 10/50
+107/107 - 53s - loss: 118.2790 - val_loss: 18.5655
+Epoch 11/50
+107/107 - 53s - loss: 109.0243 - val_loss: 9.4875
+Epoch 12/50
+107/107 - 53s - loss: 94.4770 - val_loss: 31.2877
+Epoch 13/50
+107/107 - 53s - loss: 87.5089 - val_loss: 96.1269
+Epoch 14/50
+107/107 - 53s - loss: 79.7243 - val_loss: 25.0205
+Epoch 15/50
+107/107 - 53s - loss: 76.7644 - val_loss: 14.2715
+Epoch 16/50
+107/107 - 53s - loss: 77.5900 - val_loss: 50.8267
+Epoch 17/50
+107/107 - 53s - loss: 80.5555 - val_loss: 15.9000
+Epoch 18/50
+107/107 - 53s - loss: 70.2434 - val_loss: 32.0735
+Epoch 19/50
+107/107 - 53s - loss: 65.8078 - val_loss: 13.9514
+Epoch 20/50
+107/107 - 53s - loss: 64.4896 - val_loss: 25.4496
+Epoch 21/50
+107/107 - 53s - loss: 63.1954 - val_loss: 34.4389
+Epoch 22/50
+107/107 - 53s - loss: 61.5865 - val_loss: 26.5780
+Epoch 23/50
+107/107 - 53s - loss: 59.6700 - val_loss: 34.7760
+Epoch 24/50
+107/107 - 53s - loss: 60.0106 - val_loss: 567.3679
+Epoch 25/50
+107/107 - 53s - loss: 58.7494 - val_loss: 41.3163
+Epoch 26/50
+107/107 - 53s - loss: 55.7775 - val_loss: 27.1271
+Epoch 27/50
+107/107 - 53s - loss: 55.0845 - val_loss: 48.2514
+Epoch 28/50
+107/107 - 53s - loss: 55.2622 - val_loss: 27.9936
+Epoch 29/50
+107/107 - 53s - loss: 59.4482 - val_loss: 67.3776
+Epoch 30/50
+107/107 - 53s - loss: 52.5018 - val_loss: 16.7210
+Epoch 31/50
+107/107 - 53s - loss: 51.2625 - val_loss: 34.2245
+Epoch 32/50
+107/107 - 53s - loss: 52.7816 - val_loss: 35.7284
+Epoch 33/50
+107/107 - 53s - loss: 51.8962 - val_loss: 25.3698
+Epoch 34/50
+107/107 - 53s - loss: 49.7965 - val_loss: 19.0906
+Epoch 35/50
+107/107 - 53s - loss: 49.1147 - val_loss: 50.0118
+Epoch 36/50
+107/107 - 53s - loss: 48.6942 - val_loss: 28.3938
+Epoch 37/50
+107/107 - 53s - loss: 47.1345 - val_loss: 35.4010
+Epoch 38/50
+107/107 - 53s - loss: 46.7600 - val_loss: 28.2343
+Epoch 39/50
+107/107 - 53s - loss: 47.4256 - val_loss: 24.8677
+Epoch 40/50
+107/107 - 53s - loss: 46.1462 - val_loss: 37.1265
+Epoch 41/50
+107/107 - 53s - loss: 46.4421 - val_loss: 42.8148
+Epoch 42/50
+107/107 - 53s - loss: 45.7098 - val_loss: 28.4286
+Epoch 43/50
+107/107 - 53s - loss: 45.9937 - val_loss: 54.1862
+Epoch 44/50
+107/107 - 53s - loss: 45.2462 - val_loss: 38.0901
+Epoch 45/50
+107/107 - 53s - loss: 43.9729 - val_loss: 32.1867
+Epoch 46/50
+107/107 - 53s - loss: 44.4455 - val_loss: 39.4902
+Epoch 47/50
+107/107 - 53s - loss: 45.7433 - val_loss: 31.9186
+Epoch 48/50
+107/107 - 53s - loss: 45.5461 - val_loss: 32.9142
+Epoch 49/50
+107/107 - 53s - loss: 44.0984 - val_loss: 44.2573
+Epoch 50/50
+107/107 - 53s - loss: 43.2851 - val_loss: 23.0991
+train mse = 12.284, validation mse = 23.0991
+train mean dist = 4.23111, validation mean dist = 6.63666
+train median dist = 3.74812, validation median dist = 6.42311
+After sliding window: ((723, 50, 125), (723, 2))
+After sliding window: ((6898, 50, 125), (6898, 2))
+
+Errors of models with sentences (fold= 9 ):
+mean: test:  14.108831013843552 train: 4.23877144647952
+median: test:  12.425634329244295 train: 3.7581130024669744
+Fold 9 (sents) done in: 45.506 minutes (0.758 hours)
+-------------------------------------------
+
+After sliding window: ((6828, 50, 63), (6828, 2))
+After sliding window: ((21, 50, 63), (21, 2))
+Model: "RatLSTM"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+Input (InputLayer)           [(None, 50, 63)]          0         
+_________________________________________________________________
+firstLstmBlock (LSTM)        (None, 50, 256)           327680    
+_________________________________________________________________
+firstLstmDropout (Dropout)   (None, 50, 256)           0         
+_________________________________________________________________
+secondLstmBlock (LSTM)       (None, 256)               525312    
+_________________________________________________________________
+secondLstmDropout (Dropout)  (None, 256)               0         
+_________________________________________________________________
+Output (Dense)               (None, 2)                 514       
+=================================================================
+Total params: 853,506
+Trainable params: 853,506
+Non-trainable params: 0
+_________________________________________________________________
+None
+(6828, 50, 63)
+(6828, 2)
+(21, 50, 63)
+(21, 2)
+Epoch 1/50
+107/107 - 52s - loss: 2035.7556 - val_loss: 1941.5997
+Epoch 2/50
+107/107 - 52s - loss: 1013.6249 - val_loss: 923.9490
+Epoch 3/50
+107/107 - 52s - loss: 817.4318 - val_loss: 606.3337
+Epoch 4/50
+107/107 - 52s - loss: 796.0095 - val_loss: 538.7796
+Epoch 5/50
+107/107 - 52s - loss: 796.2984 - val_loss: 487.9528
+Epoch 6/50
+107/107 - 52s - loss: 800.2841 - val_loss: 417.8884
+Epoch 7/50
+107/107 - 52s - loss: 672.2686 - val_loss: 243.2042
+Epoch 8/50
+107/107 - 52s - loss: 539.1014 - val_loss: 155.5119
+Epoch 9/50
+107/107 - 52s - loss: 424.3778 - val_loss: 100.6076
+Epoch 10/50
+107/107 - 52s - loss: 318.0508 - val_loss: 64.6223
+Epoch 11/50
+107/107 - 52s - loss: 234.5934 - val_loss: 30.7385
+Epoch 12/50
+107/107 - 52s - loss: 180.1368 - val_loss: 37.5137
+Epoch 13/50
+107/107 - 52s - loss: 138.2819 - val_loss: 31.9867
+Epoch 14/50
+107/107 - 52s - loss: 108.9351 - val_loss: 136.8718
+Epoch 15/50
+107/107 - 52s - loss: 93.4118 - val_loss: 39.0170
+Epoch 16/50
+107/107 - 52s - loss: 98.6677 - val_loss: 13.1792
+Epoch 17/50
+107/107 - 52s - loss: 78.0533 - val_loss: 12.7391
+Epoch 18/50
+107/107 - 52s - loss: 72.1785 - val_loss: 75.5808
+Epoch 19/50
+107/107 - 52s - loss: 70.9344 - val_loss: 21.0924
+Epoch 20/50
+107/107 - 52s - loss: 64.9773 - val_loss: 31.4219
+Epoch 21/50
+107/107 - 52s - loss: 61.5466 - val_loss: 29.9965
+Epoch 22/50
+107/107 - 52s - loss: 59.1838 - val_loss: 40.2080
+Epoch 23/50
+107/107 - 52s - loss: 58.6351 - val_loss: 19.5679
+Epoch 24/50
+107/107 - 52s - loss: 56.2081 - val_loss: 13.5179
+Epoch 25/50
+107/107 - 52s - loss: 54.4891 - val_loss: 12.4332
+Epoch 26/50
+107/107 - 52s - loss: 54.7412 - val_loss: 47.6661
+Epoch 27/50
+107/107 - 52s - loss: 50.6859 - val_loss: 30.8286
+Epoch 28/50
+107/107 - 52s - loss: 51.5440 - val_loss: 16.9174
+Epoch 29/50
+107/107 - 52s - loss: 49.0939 - val_loss: 26.4732
+Epoch 30/50
+107/107 - 52s - loss: 51.9048 - val_loss: 26.0506
+Epoch 31/50
+107/107 - 52s - loss: 49.7772 - val_loss: 36.3100
+Epoch 32/50
+107/107 - 52s - loss: 49.2836 - val_loss: 20.7862
+Epoch 33/50
+107/107 - 52s - loss: 48.3567 - val_loss: 18.4633
+Epoch 34/50
+107/107 - 52s - loss: 47.0939 - val_loss: 46.9673
+Epoch 35/50
+107/107 - 52s - loss: 48.0297 - val_loss: 37.1022
+Epoch 36/50
+107/107 - 52s - loss: 45.2391 - val_loss: 15.3738
+Epoch 37/50
+107/107 - 52s - loss: 46.0234 - val_loss: 15.7306
+Epoch 38/50
+107/107 - 52s - loss: 44.7215 - val_loss: 12.4735
+Epoch 39/50
+107/107 - 52s - loss: 44.8354 - val_loss: 22.7857
+Epoch 40/50
+107/107 - 52s - loss: 44.2263 - val_loss: 11.8831
+Epoch 41/50
+107/107 - 52s - loss: 42.5841 - val_loss: 24.2778
+Epoch 42/50
+107/107 - 52s - loss: 42.5015 - val_loss: 14.0167
+Epoch 43/50
+107/107 - 52s - loss: 42.0832 - val_loss: 34.4698
+Epoch 44/50
+107/107 - 52s - loss: 42.4455 - val_loss: 38.9779
+Epoch 45/50
+107/107 - 52s - loss: 41.2270 - val_loss: 37.4581
+Epoch 46/50
+107/107 - 52s - loss: 43.0854 - val_loss: 30.2948
+Epoch 47/50
+107/107 - 52s - loss: 41.8318 - val_loss: 23.9960
+Epoch 48/50
+107/107 - 52s - loss: 40.8155 - val_loss: 19.8765
+Epoch 49/50
+107/107 - 52s - loss: 40.3404 - val_loss: 49.7071
+Epoch 50/50
+107/107 - 52s - loss: 39.4107 - val_loss: 23.6053
+train mse = 9.28481, validation mse = 23.6053
+train mean dist = 3.74544, validation mean dist = 6.38054
+train median dist = 3.42155, validation median dist = 6.15282
+After sliding window: ((723, 50, 63), (723, 2))
+After sliding window: ((6898, 50, 63), (6898, 2))
+
+Errors of models with spikes (fold= 9 ):
+mean: test:  18.631188886875588 train: 3.7561128782961952
+median: test:  13.994834570332992 train: 3.424386468256529
+Fold 9 (spikes) done in: 44.228 minutes (0.737 hours)
+
+------------------------------------
+FINAL RESULTS:
+
+MEAN DISTANCES IN TEST SET (cm):
+   LSTM_spikes  LSTM_sents
+0    15.802145   16.875862
+1    20.579497   16.562476
+2    15.106551   12.286130
+3    13.697285   12.792894
+4    10.838853   13.451346
+5    12.081285   12.137549
+6    11.497623   14.030273
+7    10.243667   12.806745
+8    15.397879   13.652512
+9    18.631189   14.108831
+
+MEDIAN DISTANCES IN TEST SET (cm):
+   LSTM_spikes  LSTM_sents
+0    11.956582   12.424869
+1    14.434702   11.943308
+2    10.769553    9.942036
+3    12.453799   11.156087
+4     9.723522   10.460212
+5     9.067911   10.838302
+6     9.201798   11.023156
+7     9.004789   10.861287
+8    10.921303   11.905504
+9    13.994835   12.425634
+
+Avgerages over 10 folds:
+             Mean error  Median error  st.dev. of mean  st.dev of median
+LSTM_spikes   14.387597     11.152879         3.221793          1.902554
+LSTM_sents    13.870462     11.298039         1.561750          0.797817
